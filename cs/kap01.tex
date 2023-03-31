@@ -1,224 +1,151 @@
-%%% Fiktivní kapitola s ukázkami sazby
 
-\chapter{Nápověda k~sazbě}
+\chapter{Úvod do problematiky}
 
-\section{Úprava práce}
+\section {Seznámení s biologickými pojmy}
 
-Vlastní text bakalářské práce je uspořádaný hierarchicky do kapitol a podkapitol,
-každá kapitola začíná na nové straně. Text je zarovnán do bloku. Nový odstavec
-se obvykle odděluje malou vertikální mezerou a odsazením prvního řádku. Grafická
-úprava má být v~celém textu jednotná.
+\subsection{Nukleotid}
 
-Práce se tiskne na bílý papír formátu A4. Okraje musí ponechat dost místa na vazbu:
-doporučen je horní, dolní a pravý okraj $25\,\rm mm$, levý okraj $40\,\rm mm$.
-Číslují se všechny strany kromě obálky a informačních stran na začátku práce;
-první číslovaná strana bývá obvykle ta s~obsahem.
+\subsection{Sekundární struktura RNA}
+  RNA neboli kyselina ribonukleová je nukleová kyselina, skládající se z
+  řetězce tvořeného vzájemně propojenými nukleotidy. Ty jsou tvořeny z některé
+  z bází adenin, uracil, guanin a cytosin. Je obvykle jednovláknová, někdy i
+  dvouvláknová. Její přesná funkce se liší v závislosti na typu, ale slouží k
+  přenosu genetické informace z jádra buňky na místo syntézy bílkovin, a také
+  se procesu syntézy přímo účastní.
 
-Písmo se doporučuje dvanáctibodové ($12\,\rm pt$) se standardní vzdáleností mezi řádky
-(pokud píšete ve Wordu nebo podobném programu, odpovídá tomu řádkování $1,5$; v~\TeX{}u
-není potřeba nic přepínat). Pro běžný text používejte vzpřímené patkové písmo.
-Text matematických vět se obvykle tiskne pro zdůraznění skloněným (slanted) písmem,
-není-li k~dispozici, může být zastoupeno kurzívou.
+  Primární struktura RNA je dána přesným pořadím nukleotidů v řetězci.
+  Sekundární struktura RNA má podobu jednoduchého stočeného řetězce. V
+  některých druzích RNA lze nalézt i zdvojené úseky řetězce. Terciální
+  struktura RNA pak popisuje prostorové rozložení.
 
-Primárně je doporučován jednostranný tisk (příliš tenkou práci lze obtížně svázat).
-Delší práce je lepší tisknout oboustranně a přizpůsobit tomu velikosti okrajů:
-$40\,\rm mm$ má vždy \emph{vnitřní} okraj. Rub titulního listu zůstává nepotištěný.
+\section {Používané datové zdroje}
 
-Zkratky použité v textu musí být vysvětleny vždy u prvního výskytu zkratky (v~závorce nebo
-v poznámce pod čarou, jde-li o složitější vysvětlení pojmu či zkratky). Pokud je zkratek
-více, připojuje se seznam použitých zkratek, včetně jejich vysvětlení a/nebo odkazů
-na definici.
+\subsection{Datové fromáty}
 
-Delší převzatý text jiného autora je nutné vymezit uvozovkami nebo jinak vyznačit a řádně
-citovat.
+\subsubsection*{JSON}
+  JSON (javascriptový objektový zápis) je datový formát sloužící k ukládání dat
+  organizovaných v polích nebo objektech. Navzdory názvu je na programovacím
+  jazyce nezávislý. Skládá se z dvojice klíč -- hodnota. Hodnota je libovolný
+  podporovaný datový typ (např.: boolean, číslo, string, pole, objekt). Níže je
+  úkázka JSON formátu.
 
-\section{Jednoduché příklady}
+\begin{code}
+  { 
+    "basePairs": [
+      {
+        "basePairType": "canonical",
+        "classes": [
+          "bp-line"
+        ],
+        "residueIndex1": 2,
+        "residueIndex2": 118
+      }
+    ]    
+  }
+\end{code}
 
-Čísla v~českém textu obvykle sázíme v~matematickém režimu s~desetinnou čárkou:
-%%% Bez \usepackage{icomma}:
-% $\pi \doteq 3{,}141\,592\,653\,589$.
-%%% S \usepackage{icomma}:
-$\pi \doteq 3,141\,592\,653\,589$.
-V~matematických textech se považuje za přípustné používat desetinnou tečku
-(pro lepší odlišení od čárky v~roli oddělovače). Numerické výsledky se uvádějí
-s~přiměřeným počtem desetinných míst.
+\section{Seznámení s typama vizualizace sekundárních RNA struktur}
 
-Mezi číslo a jednotku patří úzká mezera: šířka stránky A4 činí $210\,\rm mm$, což si
-pamatuje pouze $5\,\%$ autorů. Pokud ale údaj slouží jako přívlastek, mezeru vynecháváme:
-$25\rm mm$ okraj, $95\%$ interval spolehlivosti.
+\subsection{Standardní layout}
 
-Rozlišujeme různé druhy pomlček:
-červeno-černý (krátká pomlčka),
-strana 16--22 (střední),
-$45-44$ (matematické minus),
-a~toto je --- jak se asi dalo čekat --- vložená věta ohraničená dlouhými pomlčkami.
+\subsection {Arc diagram}
 
-V~českém textu se používají \uv{české} uvozovky, nikoliv ``anglické''.
+\subsection {radial layout}
 
-% V tomto odstavci se vlnka zviditelňuje
-{
-\def~{{\tt\char126}}
-Na některých místech je potřeba zabránit lámání řádku (v~\TeX{}u značíme vlnovkou):
-u~předložek (neslabičnych, nebo obecně jednopísmenných), vrchol~$v$, před $k$~kroky,
-a~proto, \dots{} obecně kdekoliv, kde by při rozlomení čtenář \uv{ško\-brt\-nul}.
-}
+\section{Podobné projekty}
+Rádi bychom čtenáře seznámili s některými nástroji, které jsou používáné pro
+vizualizaci sekundárních RNA struktur. Většina z nich je program a mohlo by se
+proto zdát zbytečné je zmiňovat nebo porovnávat s naší knihovnou. Nicméně u
+níže zmíněných programů není duležité řešení samotného grafického rozhraní,
+jako především druh zvolených metod pro vizualizaci a následné porovnávání.
 
-\section{Matematické vzorce a výrazy}
+Nejsou zde zmíněné všechny existující nástroje, ale byla snaha vybrat takové,
+které mají rozdílné přístupy a nabízí nejširší paletu funkcí.
 
-Proměnné sázíme kurzívou (to \TeX{} v~matematickém módu dělá sám, ale
-nezapomínejte na to v~okolním textu a také si matematický mód zapněte).
-Názvy funkcí sázíme vzpřímeně. Tedy například:
-$\var(X) = \E X^2 - \bigl(\E X \bigr)^2$.
+\subsection{VARNA}
+  VARNA\cite{Varna} (Visualization Applet for RNA) je nástroj pro automatické kreslení,
+  vizualizaci a anotaci sekundárních RNA struktur, navržený jako doprovodný
+  software pro webové servery a databáze.
 
-Zlomky uvnitř odstavce (třeba $\frac{5}{7}$ nebo $\frac{x+y}{2}$) mohou
-být příliš stísněné, takže je lepší sázet jednoduché zlomky s~lomítkem:
-$5/7$, $(x+y)/2$.
+  VARNA implementuje čtyři kreslící algoritmy, podporuje formáty dbn, ct,
+  bpseq a RNAML pro vstup i výstup a je schopné exportovat kresbu do rastrových
+  nebo vektorových formátů. Umožňuje ruční úpravy a strukturální anotace
+  výsledku kresby a je považována za standard pro práci se sekundárníma RNA
+  strukturama.
 
-Nechť
-\[   % LaTeXová náhrada klasického TeXového $$
-\mathbb{X} = \begin{pmatrix}
-      \T{\bm x_1} \\
-      \vdots \\
-      \T{\bm x_n}
-      \end{pmatrix}.
-\]
-Povšimněme si tečky za~maticí. Byť je matematický text vysázen
-ve~specifickém prostředí, stále je gramaticky součástí věty a~tudíž je
-zapotřebí neopomenout patřičná interpunkční znaménka. Výrazy, na které
-chceme později odkazovat, je vhodné očíslovat:
-\begin{equation}\label{eq01:Xmat}
-\mathbb{X} = \begin{pmatrix}
-      \T{\bm x_1} \\
-      \vdots \\
-      \T{\bm x_n}
-      \end{pmatrix}.
-\end{equation}
-Výraz \eqref{eq01:Xmat} definuje matici $\mathbb{X}$. Pro lepší čitelnost
-a~přehlednost textu je vhodné číslovat pouze ty výrazy, na které se
-autor někde v~další části textu odkazuje. To jest, nečíslujte
-automaticky všechny výrazy vysázené některým z~matematických
-prostředí.
+  Kromě samotného faktu, že VARNA je program se liší od náší knihovny i v
+  dalších bodech. Zatímco VARNA je rozumný nástroj pro anotaci a vykreslení
+  výše zmíněných textových formátů různými způsoby, naše knihovna se snaží
+  poskytnout pouze metody pro porovnávání sekundárních RNA struktur s již daným
+  rozložením nukletidů v prostoru. VARNA navíc pro implementaci na web používá
+  Java Applets
+  \footnote{https://docs.oracle.com/javase/tutorial/deployment/applet/index.html},
+  které jsou od roku 2017 považované za zastaralé
+  \footnote{https://www.oracle.com/java/technologies/javase/9-deprecated-features.html},
+  tím pádem je nelze považovat za vhodnou variantu pro použití na webu.
 
-Zarovnání vzorců do několika sloupečků:
-\begin{alignat*}{3}
-S(t) &= \pr(T > t),    &\qquad t&>0       &\qquad&\text{ (zprava spojitá),}\\
-F(t) &= \pr(T \leq t), &\qquad t&>0       &\qquad&\text{ (zprava spojitá).}
-\end{alignat*}
+\subsection{RNAStructViz}
+  RNAStructViz\cite{RnaStructViz} je grafický nástroj pro analýzu sekundárních
+  RNA struktur. Jeho předností je vizuální porovnání tří konfigurací v
+  kompaktním a standartizovaným {\color{red} TODO: přeložit???} circular arc
+  diagramu. Doplněné zabudovaným prohlížečem {\color{red} TODO: přeložit???}
+  CT-style souboru a prohližeče {\color{red} TODO: přeložit???} radial layout
+  podstruktury, která je přímo propojená s {\color{red} TODO: přeložit???} arc
+  diagram oknem skrze nástroj pro výběr zoom. Mezi další funkce patří
+  vypočítání číselných informací a možnost exportu obrázků a dat pro pozdější
+  použití.
 
-Dva vzorce se spojovníkem:
-\begin{equation}\label{eq01:FS}
-\left.
-\begin{aligned}
-S(t) &= \pr(T > t) \\[1ex]
-F(t) &= \pr(T \leq t)
-\end{aligned}
-\;	% zde pomůže ručně vynechat trochu místa
-\right\}
-\quad t>0 \qquad \text{(zprava spojité).}
-\end{equation}
+  Hlavním rozdílem v RNAStructViz kromě samotného faktu, že se
+  jedná o program a ne knihovnu, vidíme zvolené metody porovnání.
+  Zatímco naše knihovna používá standartní rozložení bez omezení
+  na počet struktur, tak RNAStructViz používá {\color{red} TODO:
+  přeložit?} radial layout s maximální podporou zobrazení tří
+  struktur najednou.
 
-Dva centrované nečíslované vzorce:
-\begin{gather*}
-\bm Y = \mathbb{X}\bm\beta + \bm\varepsilon, \\[1ex]
-\mathbb{X} = \begin{pmatrix} 1 & \T{\bm x_1} \\ \vdots & \vdots \\ 1 &
-  \T{\bm x_n} \end{pmatrix}.
-\end{gather*}
-Dva centrované číslované vzorce:
-\begin{gather}
-\bm Y = \mathbb{X}\bm\beta + \bm\varepsilon, \label{eq02:Y}\\[1ex]
-\mathbb{X} = \begin{pmatrix} 1 & \T{\bm x_1} \label{eq03:X}\\ \vdots & \vdots \\ 1 &
-  \T{\bm x_n} \end{pmatrix}.
-\end{gather}
+\subsection{Forna}
+  Forna\cite{Forna} (force-directed rna) nabízí webové rozhraní a server, který
+  umožňuje uživateli vložit sekundární RNA strukturu ve formátu dot-bracket a
+  zobrazí ji jako force-directed graf. Uživatel může následně upravit pozice
+  přetažením myší a lze i upravovat přímo strukturu. Forna umožňuje zobrazení
+  libovolného množství struktur vedle sebe, ale nenabízí metody pro porovnávání
+  mezi sebou.
 
-Definice rozdělená na dva případy:
-\[
-P_{r-j}=
-\begin{cases}
-0, & \text{je-li $r-j$ liché},\\
-r!\,(-1)^{(r-j)/2}, & \text{je-li $r-j$ sudé}.
-\end{cases}
-\]
-Všimněte si použití interpunkce v této konstrukci. Čárky a tečky se
-dávají na místa, kam podle jazykových pravidel patří.
+\subsection{R-chie}
+  R-chie \cite{Rchie} je web server, který umí vygenerovat šest různých typů
+  {\color{red} TODO: přeložit?} arc diagramu. Vývoj tohoto nástroje byl se
+  zaměřením především na složitější struktury, které nelze hezky nakreslit v
+  rovinném diagramu. R-chie umí vygenerovat diagram pro porovnávání dvou
+  sekundárních RNA struktur. Důležitým cílem bylo možnost generovat diagramy
+  pro velké množství dat, proto také nenabízí grafické rozhraní a s ním
+  spojenou interakci se strukturama. 
 
-\begin{align}
-x& = y_1-y_2+y_3-y_5+y_8-\dots = && \text{z \eqref{eq02:Y}} \nonumber\\
-& = y'\circ y^* = && \text{podle \eqref{eq03:X}} \nonumber\\
-& = y(0) y' && \text {z Axiomu 1.}
-\end{align}
+  Kromě metody vizualizace se liší od naší knihovny právě ve zmíněné snaze
+  zpracovat velké množství dat bez interakce, zatím co naše knihovna se
+  soustředí na interakci se sekundárníma RNA strukturama. Projekt také nabízí
+  balíček napsaný v jazyce R\footnote{https://www.r-project.org/} zvaný R4RNA,
+  který umožňuje spuštění programu lokálně a napříč operačním systémům.
 
+\section{Příbuzné projekty}
+Níže jsou zmíněné dva projekty, které úzce souvisí s naší knihovnou, protože
+produkují vstupní data ve formátu, se kterým pracuje naše knihovna a metody
+použité v generovaní takových dat jsou klíčové pro naší knihovnu.
 
-Dva zarovnané vzorce nečíslované:
-\begin{align*}
-L(\bm\theta) &= \prod_{i=1}^n f_i(y_i;\,\bm\theta), \\
-\ell(\bm\theta) &= \log\bigl\{L(\bm\theta)\bigr\} =
-\sum_{i=1}^n \log\bigl\{f_i(y_i;\,\bm\theta)\bigr\}.
-\end{align*}
-Dva zarovnané vzorce, první číslovaný:
-\begin{align}
-L(\bm\theta) &= \prod_{i=1}^n f_i(y_i;\,\bm\theta), \label{eq01:L} \\
-\ell(\bm\theta) &= \log\bigl\{L(\bm\theta)\bigr\} =
-\sum_{i=1}^n \log\bigl\{f_i(y_i;\,\bm\theta)\bigr\}. \nonumber
-\end{align}
+\subsection{TRAVeLer}
+  Traveler\cite{Traveler2017} je nástroj pro vizualizaci cílové sekundární
+  struktury, využívající existující rozložení dostatečně podobné RNA struktury
+  jako vzor. Traveler je založený na algoritmu, který konvertuje cílovou a
+  vzorovou strukturu do odpovídající stromové reprezentace a využije stromovou
+  editační vzdálenost společně s modifikace rozložení k přetvoření vzorové
+  struktury do cílové. Traveler přijme na vstupu sekundární strukturu a
+  vzor rozložení a na výstupu dá rozložeí cílové struktury. Je to tedy
+  command-line open source nástroj schopný rychle generovat rozložení i pro
+  největší RNA struktury za poskytnutí dostatečně podobného rozložení.
 
-Vzorec na dva řádky, první řádek zarovnaný vlevo, druhý vpravo, nečíslovaný:
-\begin{multline*}
-\ell(\mu,\,\sigma^2) = \log\bigl\{L(\mu,\,\sigma^2)\bigr\} =
-\sum_{i=1}^n \log\bigl\{f_i(y_i;\,\mu,\,\sigma^2)\bigr\}= \\
-  = -\,\frac{n}{2}\,\log(2\pi\sigma^2) \,-\,
-\frac{1}{2\sigma^2}\sum_{i=1}^n\,(y_i - \mu)^2.
-\end{multline*}
-
-Vzorec na dva řádky, zarovnaný na $=$, číslovaný uprostřed:
-\begin{equation}\label{eq01:ell}
-\begin{split}
-\ell(\mu,\,\sigma^2) &= \log\bigl\{L(\mu,\,\sigma^2)\bigr\} =
-\sum_{i=1}^n \log\bigl\{f(y_i;\,\mu,\,\sigma^2)\bigr\}= \\
-& = -\,\frac{n}{2}\,\log(2\pi\sigma^2) \,-\,
-\frac{1}{2\sigma^2}\sum_{i=1}^n\,(y_i - \mu)^2.
-\end{split}
-\end{equation}
-
-\section{Definice, věty, důkazy, \dots}
-
-Konstrukce typu definice, věta, důkaz, příklad, \dots je vhodné
-odlišit od okolního textu a~případně též číslovat s~možností použití
-křížových odkazů. Pro každý typ těchto konstrukcí je vhodné mít
-v~souboru s~makry (\texttt{makra.tex}) nadefinované jedno prostředí,
-které zajistí jak vizuální odlišení od okolního textu, tak
-automatické číslování s~možností křížově odkazovat.
-
-\begin{definice}\label{def01:1}
-  Nechť náhodné veličiny $X_1,\dots,X_n$ jsou definovány na témž
-  prav\-dě\-po\-dob\-nost\-ním prostoru $(\Omega,\,\mathcal{A},\,\pr)$. Pak
-  vektor $\bm X = \T{(X_1,\dots,X_n)}$ nazveme \emph{náhodným
-    vektorem}.
-\end{definice}
-
-\begin{definice}[náhodný vektor]\label{def01:2}
-  Nechť náhodné veličiny $X_1,\dots,X_n$ jsou definovány na témž
-  pravděpodobnostním prostoru $(\Omega,\,\mathcal{A},\,\pr)$. Pak
-  vektor $\bm X = \T{(X_1,\dots,X_n)}$ nazveme \emph{náhodným
-    vektorem}.
-\end{definice}
-Definice~\ref{def01:1} ukazuje použití prostředí pro sazbu definice
-bez titulku, definice~\ref{def01:2} ukazuje použití prostředí pro
-sazbu definice s~titulkem.
-
-\begin{veta}\label{veta01:1}
-  Náhodný vektor $\bm X$ je měřitelné zobrazení prostoru
-  $(\Omega,\,\mathcal{A},\,\pr)$ do $(\R_n,\,\mathcal{B}_n)$.
-\end{veta}
-
-\begin{lemma}[\citealp{Andel07}, str. 29]\label{veta01:2}
-  Náhodný vektor $\bm X$ je měřitelné zobrazení prostoru
-  $(\Omega,\,\mathcal{A},\,\pr)$ do $(\R_n,\,\mathcal{B}_n)$.
-\end{lemma}
-\begin{dukaz}
-  Jednotlivé kroky důkazu jsou podrobně popsány v~práci \citet[str.
-  29]{Andel07}.
-\end{dukaz}
-Věta~\ref{veta01:1} ukazuje použití prostředí pro sazbu matematické
-věty bez titulku, lemma~\ref{veta01:2} ukazuje použití prostředí pro
-sazbu matematické věty s~titulkem. Lemmata byla zavedena v~hlavním
-souboru tak, že sdílejí číslování s~větami.
+\subsection{R2DT}
+  R2DT\cite{R2DT2021} je metoda pro predikci a vizualizaci široké škály
+  sekundárních RNA struktur ve standardním rozložení. R2DT je postaveno na
+  knihovně se 3 647 vzory reprezentujícími většinu známých RNA struktur. R2DT
+  se používá na ncRNA sekvence z RNAcentral\footnote{https://rnacentral.org/}
+  databáze a vytvořil více než 13 miliónů diagramů, čímž tvoří největší
+  světovou sadu dat s 2D RNA strukturami. Pro vizualizaci neboli 2D rozložení
+  používá právě výše zmíněný nástroj Traveler.
