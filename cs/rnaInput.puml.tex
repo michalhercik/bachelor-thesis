@@ -1,0 +1,61 @@
+@startuml
+!theme plain
+interface IDataBasePair {
+    +residueIndex1: number
+    +residueIndex2: number
+    +basePairType: string
+    +classes: string[]
+}
+interface IDataLabelContent {
+    +classes: string[]
+    +label: string
+    +x: number
+    +y: number
+}
+interface IDataLabelLine {
+    +classes: string[]
+    +x1: number
+    +x2: number
+    +y1: number
+    +y2: number
+}
+interface IDataResidue {
+    +classes: string[]
+    +x: number
+    +y: number
+    +residueName: string
+    +residueIndex: number
+    +templateResidueIndex: number
+    +templateResidueName: string
+}
+interface IRnaComplexes {
+    +name: string
+    +rnaMolecules: IRnaMolecules[]
+}
+interface IRnaMolecules {
+    +name: string
+    +basePairs: IDataBasePair[]
+    +labels: IDataLabel[]
+    +sequence: IDataResidue[]
+}
+interface IRnaInput {
+    +classes: IDataStyle[]
+    +rnaComplexes: IRnaComplexes[]
+}
+interface IDataStyle {
+    +name: string
+}
+interface IDataLabel {
+    +labelContent: IDataLabelContent
+    +labelLine: IDataLabelLine
+    +residueIndex: number
+}
+IRnaComplexes --> "*" IRnaMolecules
+IRnaMolecules --> "*" IDataBasePair
+IRnaMolecules --> "*" IDataLabel
+IRnaMolecules --> "*" IDataResidue
+IRnaInput --> "*" IDataStyle
+IRnaInput --> "*" IRnaComplexes
+IDataLabel --> "1" IDataLabelContent
+IDataLabel --> "1" IDataLabelLine
+@enduml
