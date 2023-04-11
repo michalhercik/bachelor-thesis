@@ -9,17 +9,60 @@ Volba programovacího jazyka byla poměrně přímočará. Chtěli jsme napsat
 knihovnu, která se bude používat na webu.
 Javascript\footnote{https://developer.mozilla.org/en-US/docs/Web/JavaScript} je
 v tomto případě jasnou volbou, protože to je v podstatě to jediné, co se
-používá. Přesto Javascript není jazyk, ve kterým je naše knihovna napsaná,
+používá. Přesto Javascript není jazyk, ve kterým je naše knihovna psaná,
 protože se jedná o dynamicky typovaný jazyk, což s sebou nese určité výhody pro
 jednoduché a rychlé psaní kódu, ale u větších projektů se to stává nevýhodou.
 Naše knihovna je napsaná v
 Typescriptu\footnote{https://www.typescriptlang.org/}, což je nadmnožina
 Javascriptu, snažící se řešit jeho slabiny a navíc ho lze snadno přeložit do
-Javasrciptu.
+Javasrciptu a v této formě distribuovat. Při tomto překladu je možné zachovat i
+informaci o konkrétních typech, tím pádem projekty, využívající naší knihovnu,
+psané v Typescriptu nejsou ochuzené o typovou kontrolu, kterou typescript
+nabízí.
 
-\subsection{SVG vs canvas}
+\subsection{Překlad jazyka}
 
+\subsection{verzování}
 
+Pro verzování používáme Git a celou repository hostujeme na GitHubu. Jediným
+důvodem pro toto rozhodnutí, že obě technologie známe, nemáme s nimi problém a
+neviděli jsme důvod hledat jiné možnosti.
+
+\subsection{Knihovna D3.js}
+
+D3.js\footnote{https://d3js.org/} je knihovna v jayzce Javascript pomáhající
+přivést data k životu využívající především
+SVG\footnote{https://developer.mozilla.org/en-US/docs/Web/SVG} formát, se
+kterým se dá v
+HTML\footnote{https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics}
+pohodlně pracovat. Její důraz na webové standardy dává uživateli možnost
+využívat moderní prohlížeče naplno bez dalších frameworků. S knihovnou není
+nejjednodušší se naučit pracovat, ale nabízí minimální overhead a její velkou
+předností je rychlost.
+
+\subsection{SVG nebo canvas}
+
+V počátcích jsme chtěli k zobrazování používat SVG. Jedná se o webový standard,
+který lze skvěle kombinovat s ostatními standardy jako je
+CSS\footnote{https://developer.mozilla.org/en-US/docs/Web/CSS},
+DOM\footnote{https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model},
+Javascript. V kombinací s D3.js knihovnou je pak dělání animací nebo
+aktualizaci stavu SVG objektů jednoduché.
+
+Nebyl důvod SVG nevyužívat, ale později jsme na vlastní kůži pocítili slabinu
+SVG. SVG se při vykreslování tisícovek objektů stává velmi pomalé. Takového
+počtu objektů můžeme dosáhnout pouze s jednou sekundární RNA strukturou, my
+navíc chceme zobrazit více takových struktur a ještě s nimi dynamicky pracovat. 
+
+Tím se pro nás stalo SVG nepoužitelné. Další možností bylo využití
+canvasu\footnote{https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API},
+který slibuje výrazně lepší výkon a lze ho stále jednoduše používat.
+
+Některé pro nás klíčové funkce D3.js knihovny lze využít i pro práci s
+canvasem. Konkrétně se jedná o zoom, panning a animace.
+
+U canvasu jsme nakonec i zůstali, přestože při práci s desítkama velkých
+struktur vykreslování není plynulé.
 
 \section{Vstupní data}
 
@@ -43,8 +86,7 @@ jak již bylo zmíněno samotná struktura dat není pevně daná a může se m�
 
 Jedná se o objekt, který má dvě položky - \texttt{classes}, což je pole objektů
 popisující třídy říkající způsob zobrazení struktury, podobně jako to kaskádové
-styly\footnote{https://developer.mozilla.org/en-US/docs/Web/CSS} diktují pro
-webové stránky a \texttt{rnaComplexes}. 
+styly (CSS) diktují pro webové stránky a \texttt{rnaComplexes}. 
 
 \texttt{rnaComplexes} je pole polí sloužící pro popis celých skupin RNA
 struktur. Naše knihovna pracuje vždy pouze s nultým prvkem. Neviděli jsme důvod
@@ -61,6 +103,26 @@ UML\footnote{https://www.uml.org/} diagramu těchto interfaceů.
   \includegraphics[width=145mm]{../img/rnaInput.png}
   \caption{Interface pro vstupní data}
 \end{figure}
+
+Při vykreslení dat si můžeme všimnout různého obarvení jednotlivých residue.
+Tyto barvy slouží k lepšímu zorientování ve struktuře vzhledem ke vzorové
+struktuře. Černá barva značí, že residue leží na poloze vzorového residue se
+stejným názvem. Zelenou barvou jsou označený ty residue jejiž vzorový residue
+bylo třeba přejmenovat. Modrou barvou jsou vyznačený posunutý residue. A poslední
+růžovou barvu mají nově přidaný residue.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=145mm]{../img/inputDataColors.png}
+  \caption{Odvozená sekundární RNA struktura URS00000B9D9D_471852 od d.5.b.A.madurae}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=145mm]{../img/inputDataTemplate.png}
+  \caption{Vzorová sekundární RNA struktura d.5.b.A.madurae}
+\end{figure}
+
 
 \section{Objektový návrh}
 
