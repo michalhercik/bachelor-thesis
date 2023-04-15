@@ -5,10 +5,10 @@ Cílem této knihovny není pouze vizualizovat sekundární strukturu RNA, ale t
 usnadnit analýzu rozdílů a podobností mezi více strukturami RNA. Proto jsme se
 zaměřili na práci s radiálními diagramy.
 
-Kromě toho jsme rozpoznali potenciál generování distribuce na základě
-referenční struktury, jak to dělá nástroj Traveler. Výstupem Traveleru je
-soubor ve formátu JSON, který obsahuje informace o vzoru každého nukleotidu a
-provedených úpravách.
+Kromě toho jsme rozpoznali potenciál generování distribuce na základě vzorové
+struktury, jak to dělá nástroj Traveler. Výstupem Traveleru je soubor ve
+formátu JSON, který obsahuje informace o vzoru každého nukleotidu a provedených
+úpravách.
 
 V důsledku toho jsme se rozhodli používat v našich metodách zmíněné mapování na
 referenční strukturu. Náš nástroj je tudíž schopný pracovat s $N$ strukturami,
@@ -17,10 +17,11 @@ struktury.
 
 \section{Překládání struktur}
 
-Protože jsou struktury odvozené od stejného vzoru jsou typicky velmi podobné,
-dává proto smysl mít možnost je přeložit přes sebe, aby splynuli společné části
-a vynikly ty rozdílné. Pouhým přeložením podobných struktur přes sebe získámě
-poměrně zmatený obrázek, který neukazuje nic zajímavého a není moc přehledný.
+Vzhledem k tomu, že struktury odvozené od stejného vzoru jsou obvykle velmi
+podobné, má smysl umožnit jejich překrytí, aby se spojily společné části a
+zvýraznily se rozdíly. Pouhým přeložením podobných struktur přes sebe však
+získáme výsledek, který neposkytuje příliš zajímavé informace a je málo
+přehledný.
 
 \begin{figure}[H]
   \centering
@@ -34,14 +35,17 @@ poměrně zmatený obrázek, který neukazuje nic zajímavého a není moc přeh
   \caption{Struktury přeložené přes sebe.}
 \end{figure}
 
-Proto bylo důležité přijít s nějakým způsobem pousouvání nebo zarovnání.
-Manipulací se strukturou ručně ať už přetažením myši nebo zadáním pozice může
-být zbytečně otravné především kvůli přesnému zarovnání, kterého se snažíme
-docílit. Přijde nám proto velmi užitečné mít možnost zarovnat sekundární RNA
-strukturu na konkrétní nukleotid nebo skupinu nukleotidů ze vzorové struktury.
-Tedy pokud je vybraný nukleotid $v$ ze vzorové struktury vzorovým nukleotidem
-pro nějaký nukleotid $n$ z ostatních struktur, přesuneme celou strukturu tak,
-že se nukleotidy $v$ a $n$ překrývají. 
+Je potřeba najít způsob, jak řešit problém přesunu a zarovnání struktury,
+protože manuální manipulace pomocí přetažení myší nebo zadávání pozice může být
+zbytečně obtížná, zejména pokud se snažíme dosáhnout přesného zarovnání. Proto
+je velmi užitečné umožnit zarovnání sekundární RNA struktury na konkrétní
+nukleotid nebo skupinu nukleotidů ze vzorové struktury. 
+
+Pokud je vybrán vzorový nukleotid $v$ pro určitý nukleotid $n$ z ostatních
+struktur, je celá struktura přesunuta tak, aby se nukleotidy $v$ a $n$
+překrývaly. Pokud se snažíme najít větší skupinu nukleotidů, na které chceme
+strukturu zarovnat, koukáme se na posunutí pro konkrétní nukleotidy a následně
+vybereme takové posunutí které zarovná nejvíc nukleotidů.
 
 \begin{figure}[H]
   \centering
@@ -49,10 +53,10 @@ pro nějaký nukleotid $n$ z ostatních struktur, přesuneme celou strukturu tak
   \caption{Struktury přeložené přes sebe a zarovnané.}
 \end{figure}
 
-Timto přeložením nemusí být jasné které nukleotidy mají společné a jsou
-překryté, a které naopak nejsou společné. Přidáním průhlednosti lze toto
-odlišit, protože překryté nukleotidy budou mít sytější barvu oproti těm
-nepřekrytým. 
+Pouhým přeložením struktur nelze snadno rozeznat, které nukleotidy jsou
+společné a překrývají se a které nejsou. Přidáním průhlednosti je možné tuto
+situaci rozlišit, protože překrývající se nukleotidy budou mít sytější barvu
+než ty, které se nepřekrývají.
 
 \begin{figure}[H]
   \centering
@@ -60,43 +64,46 @@ nepřekrytým.
   \caption{Struktury přeložené přes sebe, zarovnané a s průhledností.}
 \end{figure}
 
-Zarovnávání struktur bohužel neřeší všechny problémy. Obrázky se můžou zdát
-rozmazané, protože ačkoli má nukleotid vzorový nukleotid, od kterého se nijak
-neliší může stále jeho pozice být mírně posunutá. Je to dáno metodou generování
-dat. Popisky nukleotidů můžou tím pádem vypadat trochu rozmazaně. 
+Zarovnávání struktur bohužel neřeší všechny výzvy. Výsledné obrázky se mohou
+zdát rozmazané. To je způsobeno tím, že ačkoli má nukleotid vzorový nukleotid,
+který je stejný, jeho pozice se může v rozložení mírně lišit v důsledku metody
+generování dat. Tento fakt může způsobit, že popisky nukleotidů vypadají
+rozmazaně.
 
-Jako přímočaré řešení by se mohlo zdát posunout jednotilvé nukleotidy, které
-jsou blízko, aby dokonale překrývali jejich vzor. Věříme, že by to vyřešilo
-zmíněný problém, nicméně naše knihovna tuto funkci nijak přímo neimplementuje.
+Jako přímočaré řešení se může zdát posunout jednotlivé nukleotidy, které jsou
+blízko sebe, aby dokonale překrývaly jejich vzory. Věříme, že by to vyřešilo
+zmíněný problém. Nicméně naše knihovna tuto funkci přímo neimplementuje.
 
 \section{Transformace na vzor}
 
-Užitečnou metodou je transformace z a na vzorovou strukturu. Každý nukleotid,
-který má vzorový nukleotid se přemístí na pozici vzorového nukleotidu a ty
-nukleotidy, které vzor nemají jsou schované. Metoda je velmi příjemná pro práci
-se dvěmi strukturami, které si jsou podobné nebo pro počáteční přehled co je na
-co namapované. Slabá stránka této metody je zjevná při práci s vícero
-strukturami nebo strukturami, které jsou velmi odlišné. V takových situacích se
-toho na displeji děje hodně a je složité se soustředit a vypozorovat něco
-užitečného.
+Užitečnou metodou je transformace mezi vzorovou a cílovou strukturou. Každý
+nukleotid, který má svůj vzorový nukleotid, se přemístí na pozici vzorového
+nukleotidu a nukleotidy, které ve vzoru nejsou, jsou skryté. Tato metoda je
+velmi užitečná pro práci s dvěma strukturami, které jsou si podobné, nebo pro
+získání počátečního přehledu o tom, co je na co namapováno. Slabou stránkou
+této metody je její použití při práci s více než dvěma strukturami nebo
+strukturami, které jsou velmi odlišné. V takových situacích se na obrazovce
+děje mnoho věcí a je obtížné se soustředit a vypozorovat něco užitečného.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=140mm]{../img/kap02/animation.png}
-  \caption{Dvě struktury přeložené přes sebe před animací (A) a po animaci (B).}
+  \caption{Vzorová a odvozená struktura přeložené přes sebe před transformací
+  (A) a po transformaci (B).}
 \end{figure}
 
 \section{Mapovací čáry}
 
-Vědět který nukleotid se na co mapuje může být velmi užitečné pro odhalení
-rozdílů a podobností struktur. Snažili jsme se najít další způosob, jak tuto
-informaci předat ještě před animací a přišli jsme s čárami, které spojují
-nukletid se vzorovým nukleotidem.
+Vědomost o tom, který nukleotid se na co mapuje, může být významná pro odhalení
+rozdílů a podobností mezi strukturami. V našem úsilí zprostředkovat tuto
+informaci již před transformací na vzorovou sturkturu jsme přišli s dalším
+způsobem - s čárami, které spojují každý nukleotid s jeho vzorovým nukleotidem.
 
 \begin{figure}[H]
   \centering
   \includegraphics[height=90mm]{../img/kap02/mappingLines/small.png}
-  \caption{Dvě struktruy přeložené přes sebe s mapovacíma čárama.}
+  \caption{Vzorová a odvozená struktura  přeložené přes sebe s mapovacíma
+  čárama.}
 \end{figure}
 
 Bohužel tento způsob se zvětšující se velikostí struktury stáva velmi
@@ -112,8 +119,8 @@ podporuje.
 
 \section{Demonstrace metod}
 
-V rámci naší knihovny vznikla i webová
-aplikace\footnote{https://michalhercik.github.io/rna-visualizer/}, která
-demonstruje možnosti naší knihovny. Umožňuje pracovat vždy jen s jednou metodou
-nebo se všemi metodami usnadňující porovnání dvou sekundárních struktur RNA,
-které jsou zmíněné v této kapitole.
+V rámci naší knihovny jsme vytvořili také webovou
+aplikaci\footnote{https://michalhercik.github.io/rna-visualizer/}, která
+demonstruje možnosti naší knihovny. Tato aplikace umožňuje uživatelům pracovat
+s jednotlivými metodami pro usnadnění porovnání zmíněnými v této kapitole nebo
+souběžně se všemi.
