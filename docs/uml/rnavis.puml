@@ -1,0 +1,96 @@
+@startuml
+
+scale 3000 height
+
+class Residue {
+    +name: string
+    +index: number
+    +templateIndex: number
+    +templateName: string
+    +circle: Circle
+    +text: Text
+    +visible: boolean
+}
+class Line implements ILine {
+    +classes: string[]
+    +visible: boolean
+    +transform: Transformation
+}
+interface ILine {
+}
+class BasePair implements ILine {
+    +residue1: Residue
+    +residue2: Residue
+    +classes: string[]
+}
+class Label {
+    +residue: Residue
+    +line: Line
+    +text: Text
+    +visible: boolean
+}
+class Circle {
+    -coor: Vector2
+    +radius: number
+    +scale: number
+    +visible: boolean
+    +transform: Transformation
+}
+class Text {
+    -coor: Vector2
+    +text: string
+    +classes: string[]
+    +visible: boolean
+    +transform: Transformation
+}
+class Rectangle {
+    -coor: Vector2
+    +width: number
+    +height: number
+    +classes: string[]
+    +visible: boolean
+    +transform: Transformation
+}
+class DataContainer {
+    +styles: Styles
+    +width: number
+    +height: number
+    +residues: Residue[]
+    +basePairs: BasePair[]
+    +labels: Label[]
+}
+class MappingLine implements ILine {
+    +residue1: Residue
+    +residue2: Residue
+    +classes: string[]
+    +visible: boolean
+}
+class Title {
+}
+class Layer {
+    +name: string
+    +data: DataContainer
+    +mappingLines: MappingLine[]
+    +visible: boolean
+}
+class RnaVis {
+    +canvas: HTMLCanvasElement
+    +layers: Layer[]
+}
+
+Residue --> Circle
+Residue --> Text
+Label --> Line
+Label --> Text
+DataContainer --> BasePair
+DataContainer --> Label
+DataContainer --> Residue
+Title --> Text
+Title --> Rectangle
+Layer --> DataContainer
+Layer --> MappingLine
+RnaVis --> Layer
+
+Text -[hidden]r-> Circle
+DataContainer -[hidden]l-> MappingLine
+@enduml

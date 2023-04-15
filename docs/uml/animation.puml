@@ -1,0 +1,38 @@
+@startuml
+
+scale 3000 height
+
+class VisibilityRecord {
+    +residues: Residue[]
+    +to: boolean[]
+    +active: boolean
+}
+class PositionRecord {
+    +labelLines: Map<string, DoubleCoorTarget>
+    +labelTexts: Map<string, SingleCoorTarget>
+    +residues: Map<string, SingleCoorTarget>
+}
+interface IAnimation {
+}
+class SingleCoorTarget {
+    +coor: Vector2
+}
+class DoubleCoorTarget {
+    +coor1: Vector2
+    +coor2: Vector2
+}
+class TranslationAnim implements IAnimation {
+    +container: DataContainer[]
+    +from: PositionRecord[]
+    +to: PositionRecord[]
+    +isActive: boolean[]
+}
+class VisibilityAnim implements IAnimation {
+    +visibilityRecords: VisibilityRecord[]
+}
+
+PositionRecord --> DoubleCoorTarget
+PositionRecord --> SingleCoorTarget
+TranslationAnim --> PositionRecord
+VisibilityAnim --> VisibilityRecord
+@enduml

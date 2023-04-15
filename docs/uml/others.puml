@@ -1,0 +1,29 @@
+@startuml
+
+scale 3000 height
+
+class Styles {
+    +styles: Map<string, object>
+}
+class Vector2 {
+    +x: number
+    +y: number
+}
+interface Transformation {
+    +applyX(x: number): number
+    +applyY(y: number): number
+}
+class ContainerFactory {
+}
+class Draw {
+}
+class TranslationGroups {
+}
+class TranslationGroup {
+    +xShift: number
+    +yShift: number
+    +members: Residue[]
+}
+
+TranslationGroups --> TranslationGroup
+@enduml

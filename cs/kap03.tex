@@ -1,68 +1,4 @@
-
-\chapter{Programátorská dokumentace}
-
-\section{Volba technologií}
-
-\subsection{Programovací jazyk}
-
-Volba programovacího jazyka byla poměrně přímočará. Chtěli jsme napsat
-knihovnu, která se bude používat na webu.
-Javascript\footnote{https://developer.mozilla.org/en-US/docs/Web/JavaScript} je
-v tomto případě jasnou volbou, protože to je v podstatě to jediné, co se
-používá. Přesto Javascript není jazyk, ve kterým je naše knihovna psaná,
-protože se jedná o dynamicky typovaný jazyk, což s sebou nese určité výhody pro
-jednoduché a rychlé psaní kódu, ale u větších projektů se to stává nevýhodou.
-Naše knihovna je napsaná v
-Typescriptu\footnote{https://www.typescriptlang.org/}, což je nadmnožina
-Javascriptu, snažící se řešit jeho slabiny a navíc ho lze snadno přeložit do
-Javasrciptu a v této formě distribuovat. Při tomto překladu je možné zachovat i
-informaci o konkrétních typech, tím pádem projekty, využívající naší knihovnu,
-psané v Typescriptu nejsou ochuzené o typovou kontrolu, kterou typescript
-nabízí.
-
-\subsection{Překlad jazyka}
-
-\subsection{verzování}
-
-Pro verzování používáme Git a celou repository hostujeme na GitHubu. Jediným
-důvodem pro toto rozhodnutí, že obě technologie známe, nemáme s nimi problém a
-neviděli jsme důvod hledat jiné možnosti.
-
-\subsection{Knihovna D3.js}
-
-D3.js\footnote{https://d3js.org/} je knihovna v jayzce Javascript pomáhající
-přivést data k životu využívající především
-SVG\footnote{https://developer.mozilla.org/en-US/docs/Web/SVG} formát, se
-kterým se dá v
-HTML\footnote{https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics}
-pohodlně pracovat. Její důraz na webové standardy dává uživateli možnost
-využívat moderní prohlížeče naplno bez dalších frameworků. S knihovnou není
-nejjednodušší se naučit pracovat, ale nabízí minimální overhead a její velkou
-předností je rychlost.
-
-\subsection{SVG nebo canvas}
-
-V počátcích jsme chtěli k zobrazování používat SVG. Jedná se o webový standard,
-který lze skvěle kombinovat s ostatními standardy jako je
-CSS\footnote{https://developer.mozilla.org/en-US/docs/Web/CSS},
-DOM\footnote{https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model},
-Javascript. V kombinací s D3.js knihovnou je pak dělání animací nebo
-aktualizaci stavu SVG objektů jednoduché.
-
-Nebyl důvod SVG nevyužívat, ale později jsme na vlastní kůži pocítili slabinu
-SVG. SVG se při vykreslování tisícovek objektů stává velmi pomalé. Takového
-počtu objektů můžeme dosáhnout pouze s jednou sekundární RNA strukturou, my
-navíc chceme zobrazit více takových struktur a ještě s nimi dynamicky pracovat. 
-
-Tím se pro nás stalo SVG nepoužitelné. Další možností bylo využití
-canvasu\footnote{https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API},
-který slibuje výrazně lepší výkon a lze ho stále jednoduše používat.
-
-Některé pro nás klíčové funkce D3.js knihovny lze využít i pro práci s
-canvasem. Konkrétně se jedná o zoom, panning a animace.
-
-U canvasu jsme nakonec i zůstali, přestože při práci s desítkama velkých
-struktur vykreslování není plynulé.
+\chapter{Dokumentace}
 
 \section{Vstupní data}
 
@@ -77,7 +13,7 @@ schéma\footnote{https://github.com/LDWLab/RNA2D-data-schema}, které by mělo
 popisovat strukturu vstupních dat. Schéma je stále ve vývoji, proto aktuální
 výstupy R2DT nebo Traveleru neodpovídájí schématu a je dost možné, že se jejich
 výstupy budou v budoucnu měnit a naše knihovna se jim bude přizpůsobovat,
-\red{TODO: přepsat}protože RNAcentral, využívající R2DT, je největší databází s
+{\color{red}TODO: přepsat}protože RNAcentral, využívající R2DT, je největší databází s
 2D RNA strukturama.
 
 Samotná struktura dat není složitá, ale popíšeme zde pouze tu část, kterou
@@ -96,11 +32,11 @@ zachování zpětné kompatibility).
 
 V rámci naší knihovny jsme vytvořili interface, který vstupní data musí
 splňovat. Struktura zbytku dat by měla být jasně viditelná z následujícího
-UML\footnote{https://www.uml.org/} diagramu těchto interfaceů.
+diagramu těchto interfaceů.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=145mm]{../img/rnaInput.png}
+  \includegraphics[width=145mm]{../img/kap03/rnaInput.png}
   \caption{Interface pro vstupní data}
 \end{figure}
 
@@ -113,77 +49,137 @@ růžovou barvu mají nově přidaný residue.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=145mm]{../img/inputDataColors.png}
-  \caption{Odvozená sekundární RNA struktura URS00000B9D9D_471852 od d.5.b.A.madurae}
+  \includegraphics[width=140mm]{../img/kap03/inputDataColors.png}
+  \caption{A) Odvozená sekundární RNA struktura URS00000B9D9D\_471852, B)
+  Vzorová sekundární RNA struktura d.5.b.A.madurae}
 \end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=145mm]{../img/inputDataTemplate.png}
-  \caption{Vzorová sekundární RNA struktura d.5.b.A.madurae}
-\end{figure}
-
 
 \section{Objektový návrh}
 
+Udělat dobrý objektový návrh je pro knihovnu, která má usnadňovat práci velmi
+důležité, zároveň je tento úkol velmi těžký, speciálně v případě kdy není
+předem jasné, co všechno má knihovna umět. To v našem případě nebylo, a proto
+se některá rozhodnutí mohou zdát zpětně zvláštní, při nejmnenším ne ideální.
+
+{\color{red}TODO: přepsat}V následující kapitole se pokusíme čtenáře seznámit s
+objektovým návrhem naší knihovny včetně s myšlenkama, které nás k takovému
+návrhu dovedli. Nejdříve dáme čtenáři obecný pohled na strukturu a následně
+rozebere jednotlivé třídy podrobněji.
+
+\subsection{Obecný pohled na třídy}
+
+Srdcem celé knihovny je třída \texttt{RnaVis}, která vykresluje struktury na
+canvas a nastavuje se přes ní zoom/panning. Kromě toho má v sobě také uložené
+vrstvy realizované třídou \texttt{Layer}, představující jednotlivé struktury.
+
+Pro určení vykreslovacích parametrů (např. font, barva, velikost) objektů  máme
+třídu \texttt{Styles}. Před každým vykreslení se zeptáme této třídy na
+vykreslovací parametry pro daný objekt.
+
+Poslední důležitou velkou částí jsou animace. Tuto funkcionalitu zpřístupňují
+dvě hlavní třídy - \texttt{TranslationAnim}, \texttt{VisibilityAnim}. Obě
+implementují interface \texttt{IAnimation}. 
+
+Níže jsou tři diagramy tříd, které dohromady obsahují každou třídu. Diagramama
+se snažíme vyjádřit obecnou strukturu, tím pádem pro přehlednost neobsahují
+všechny informace - všechny metody, některé privátní vlastnosti a některé
+závislosti.
+ 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=145mm]{../img/rnaVis.png}
-  \caption{Interface pro vstupní data}
+  \includegraphics[width=145mm]{../img/kap03/rnavis.png}
+  \caption{Diagram tříd}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=145mm]{../img/dataContainer.png}
-  \caption{Interface pro vstupní data}
+  \includegraphics[width=145mm]{../img/kap03/animation.png}
+  \caption{Diagram tříd}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=145mm]{../img/translationGroups.png}
-  \caption{Interface pro vstupní translationGroups}
+  \includegraphics[width=145mm]{../img/kap03/others.png}
+  \caption{Diagram tříd}
 \end{figure}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=145mm]{../img/title.png}
-  \caption{Interface pro vstupní data}
-\end{figure}
+\section{Uživatelská dokumentace}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=145mm]{../img/styles.png}
-  \caption{Interface pro vstupní data}
-\end{figure}
+\subsection{Instalace}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=145mm]{../img/primitives.png}
-  \caption{Interface pro vstupní data}
-\end{figure}
+\input{../docs/bla.tex}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=145mm]{../img/iTransformation.png}
-  \caption{Interface pro vstupní data}
-\end{figure}
+\subsection{Příklady}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=145mm]{../img/draw.png}
-  \caption{Interface pro vstupní data}
-\end{figure}
+\subsubsection{Vykreslení struktur}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=145mm]{../img/containerFactory.png}
-  \caption{Interface pro vstupní data}
-\end{figure}
+\subsubsection{Transformace}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=145mm]{../img/animations.png}
-  \caption{Interface pro vstupní data}
-\end{figure}
+\section{Vývojová dokumentace}
 
+\subsection{Volba technologií}
 
+\subsubsection{Programovací jazyk}
+
+Volba programovacího jazyka byla poměrně přímočará. Chtěli jsme napsat
+knihovnu, která se bude používat na webu.
+Javascript\footnote{https://developer.mozilla.org/en-US/docs/Web/JavaScript} je
+v tomto případě jasnou volbou, protože to je v podstatě to jediné, co se
+používá. Přesto Javascript není jazyk, ve kterým je naše knihovna psaná,
+protože se jedná o dynamicky typovaný jazyk, což s sebou nese určité výhody pro
+jednoduché a rychlé psaní kódu, ale u větších projektů se to stává nevýhodou.
+Naše knihovna je napsaná v
+Typescriptu\footnote{https://www.typescriptlang.org/}, což je nadmnožina
+Javascriptu, snažící se řešit jeho slabiny a navíc ho lze snadno přeložit do
+Javasrciptu a v této formě distribuovat. Při tomto překladu je možné zachovat i
+informaci o konkrétních typech, tím pádem projekty, využívající naší knihovnu,
+psané v Typescriptu nejsou ochuzené o typovou kontrolu, kterou typescript
+nabízí.
+
+\subsection{Verzování}
+
+Chtěli jsme mít možnost se vracet ke starším verzím projektu v případě, že něco
+rozbijeme, nebo by nás pouze zajímali implementace, které už nepoužíváme. Pro
+verzování používáme Git\footnote{https://git-scm.com/}, který lze jednoduše
+používat s GitHubem\footnote{https://github.com/}. Díky kterému, je náš projekt
+přístupný odkukoliv.
+
+Jediným důvodem pro tato rozhodnutí je, že obě technologie známe, nemáme s nimi
+problém a neviděli jsme tedy důvod hledat jiné možnosti.
+
+\subsubsection{Knihovna D3.js}
+
+D3.js\footnote{https://d3js.org/} je knihovna v jayzce Javascript pomáhající
+přivést data k životu využívající především
+SVG\footnote{https://developer.mozilla.org/en-US/docs/Web/SVG} formát, se
+kterým se dá v
+HTML\footnote{https://developer.mozilla.org/en-US/docs/Learn/Getting\_started\_with\_the\_web/HTML\_basics}
+pohodlně pracovat. Její důraz na webové standardy dává uživateli možnost
+využívat moderní prohlížeče naplno bez dalších frameworků. S knihovnou není
+nejjednodušší se naučit pracovat, ale její velkou předností je rychlost.
+
+\subsubsection{SVG nebo canvas}
+
+V počátcích jsme chtěli k zobrazování používat SVG. Jedná se o webový standard,
+který lze skvěle kombinovat s ostatními standardy jako je
+CSS\footnote{https://developer.mozilla.org/en-US/docs/Web/CSS},
+DOM\footnote{https://developer.mozilla.org/en-US/docs/Web/API/Document\_Object\_Model},
+Javascript. V kombinací s D3.js knihovnou je pak dělání animací nebo
+aktualizaci stavu SVG objektů jednoduché.
+
+Nebyl důvod SVG nevyužívat, ale později jsme na vlastní kůži pocítili slabinu
+SVG. SVG se při vykreslování tisícovek objektů stává velmi pomalé. Takového
+počtu objektů můžeme dosáhnout pouze s jednou sekundární RNA strukturou, my
+navíc chceme zobrazit více takových struktur a ještě s nimi dynamicky pracovat. 
+
+Tím se pro nás stalo SVG nepoužitelné. Další možností bylo využití
+canvasu\footnote{https://developer.mozilla.org/en-US/docs/Web/API/Canvas\_API},
+který slibuje výrazně lepší výkon a lze ho stále jednoduše používat.
+
+Některé pro nás klíčové funkce D3.js knihovny lze využít i pro práci s
+canvasem. Konkrétně se jedná o zoom, panning a animace.
+
+U canvasu jsme nakonec i zůstali, přestože při práci s desítkama velkých
+struktur vykreslování není plynulé.
+
+\subsection{Rozbor implementace}

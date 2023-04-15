@@ -5,6 +5,8 @@
 
 \subsection{RNA} 
 
+{\color{red}Rozdělit do více kapitol. Jedna z kapitol struktura RNA.}
+
 RNA (zkratka z anglického ribonucleic acid) je biomolekula, která hraje
 klíčovou roli v procesu přenosu genetické informace u všech živých organismů.
 RNA se skládá z řetězce nukleotidů, které obsahují cukr ribózu, fosfátovou
@@ -23,48 +25,21 @@ molekula funguje. Například stem-loop struktura v mRNA molekule může ovlivni
 přístupnost mRNA k ribozomům, což je buněčný mechanismus zodpovědný za
 překládání mRNA na proteiny.
 
-\section {Datové formáty}
-
-\subsection{JSON} 
-
-JSON (javascriptový objektový zápis) je datový formát sloužící k ukládání dat
-organizovaných v polích nebo objektech. Navzdory názvu je na programovacím
-jazyce nezávislý. Skládá se z dvojice klíč -- hodnota. Hodnota je libovolný
-podporovaný datový typ (např.: boolean, číslo, string, pole, objekt). Níže je
-úkázka JSON formátu.
-
-\begin{code} 
-{ 
-  "basePairs": 
-  [ 
-    { 
-      "basePairType": "canonical", 
-      "classes": 
-      [
-        "bp-line" 
-      ], 
-      "residueIndex1": 2, 
-      "residueIndex2": 118 
-    } 
-  ]    
-} 
-\end{code}
-
 \section{Vizualizace sekundárních RNA struktur} 
 
 Pro reprezentaci sekundární RNA struktury se používají jak textové, tak
 grafické způsoby. Pro nás jsou nejzajímavějsí ty grafické, ze kterých v této
-části představíme tři nejpoužívanější - linear diagram, circular diagram a
+části představíme tři nejpoužívanější - arc diagram, circular diagram a
 radiate diagram. Obrázky ukázek diagramu v této části jsou získané za pomoci nástroje
 VARNA\cite{Varna}.
 
-V linear diagramu jsou nukleotidy zobrazeny na rovné čáře ve stejném pořadí jako v
+V arc diagramu jsou nukleotidy zobrazeny na rovné čáře ve stejném pořadí jako v
 sekvenci a bázové páry nukleotidů jsou spojeny obloukem.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=140mm]{../img/linear.png}
-  \caption{Ukázka linear diagramu}
+  \includegraphics[width=140mm]{../img/kap01/arc.png}
+  \caption{Ukázka arc diagramu}
 \end{figure}
 
 Circular diagram je velmi podobný. Nukleotidy neleží na rovné čáře, ale po
@@ -72,7 +47,7 @@ obvodu kruhu. Bázové páry jsou spojeny buď čárou nebo obloukem.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[height=100mm]{../img/circular.png}
+  \includegraphics[height=100mm]{../img/kap01/circular.png}
   \caption{Ukázka circular diagramu}
 \end{figure}
 
@@ -84,11 +59,11 @@ sekundární struktury, jako jsou hairpins, bulges nebo vícevětvené smyčky.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[height=100mm]{../img/radiate.png}
+  \includegraphics[height=100mm]{../img/kap01/radiate.png}
   \caption{Ukázka radiate diagramu}
 \end{figure}
 
-\section{Podobné projekty} 
+\section{Podobné projekty} {\color{red} chybi motivacni uvod, ktery by rekl, co chceme delat, aby bylo mozne pochopit podobne k cemu}
 
 Rádi bychom čtenáře seznámili s některými nástroji, které jsou používáné pro
 vizualizaci sekundárních RNA struktur. Většina z nich jsou programy s
@@ -106,20 +81,33 @@ VARNA (Visualization Applet for RNA) je nástroj pro automatické
 kreslení, vizualizaci a anotaci sekundárních RNA struktur, navržený jako
 doprovodný software pro webové servery a databáze.
 
-VARNA implementuje čtyři kreslící algoritmy, podporuje různé textové formáty
-pro vstup i výstup a je schopný exportovat kresbu do rastrových nebo
-vektorových formátů. Umožňuje ruční úpravy a strukturální anotace výsledku
-kresby a je považován za standard pro práci se sekundárními strukturami RNA.
+VARNA implementuje algoritmy pro vykreslení všech tří výše zmíněných diagramů,
+podporuje různé textové formáty pro vstup i výstup a je schopný exportovat
+kresbu do rastrových nebo vektorových formátů. Umožňuje ruční úpravy a
+strukturální anotace výsledku kresby a je považován za standard pro práci se
+sekundárními strukturami RNA.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=140mm]{../img/kap01/varna.png}
+  \caption{Snimek nástroje Varna. Zobrazená struktura je d.5.b.A.madurae.}
+\end{figure}
 
 \subsection{RNAStructViz} 
 
 RNAStructViz\cite{RnaStructViz} je grafický nástroj pro analýzu sekundárních
-RNA struktur. Jeho předností je vizuální porovnání tří konfigurací v kompaktním
-a standartizovaném circular arc diagramu. Doplněné zabudovaným prohlížečem
-CT-style souboru a prohlížečem radial diagramu podstruktury, která je přímo
-propojená s arc diagram oknem skrze nástroj pro výběr zoom. Mezi další funkce
-patří vypočítání číselných informací a možnost exportu obrázků a dat pro
-pozdější použití.
+RNA struktur. Jeho předností je vizuální porovnání tří konfigurací v circular
+arc diagramu. Doplněné zabudovaným prohlížečem CT-style\footnote{CT formát
+souboru slouží k ukládání informace o sekvenci a bázových párů.} souboru a
+prohlížečem radial diagramu podstruktury, která je přímo propojená s arc
+diagram oknem skrze nástroj pro výběr zoom. Mezi další funkce patří vypočítání
+číselných informací a možnost exportu obrázků a dat pro pozdější použití.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=140mm]{../img/kap01/rnaStructViz.png}
+  \caption{Snimek nástroje rnaStructViz, zobrazující tři struktury RNA.}
+\end{figure}
 
 \subsection{Forna} 
 
@@ -129,6 +117,13 @@ zobrazí ji jako force-directed
 graf\footnote{https://cs.brown.edu/people/rtamassi/gdhandbook/chapters/force-directed.pdf}.
 Uživatel může následně upravit pozice přetažením myší a lze i upravovat přímo
 strukturu. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=140mm]{../img/kap01/forna.png}
+  \caption{Snimek nástroje Forna. Nalevo odvozená sekundární RNA
+  struktura URS00000B9D9D\_471852 od struktury d.5.b.A.madurae napravo.}
+\end{figure}
 
 \subsection{R-chie} 
 
@@ -143,10 +138,17 @@ Projekt také nabízí balíček napsaný v jazyce
 R\footnote{https://www.r-project.org/} zvaný R4RNA, který umožňuje spuštění
 programu lokálně a napříč operačním systémům.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=140mm]{../img/kap01/rchie.jpeg}
+  \caption{Výsledný arc diagram nástroje R-chie, zobrazující dvě sturktury.
+  První struktura je nad horizontální čárou a druhá pod ní.}
+\end{figure}
+
 \subsection{Shrnutí existujících nástrojů}
 
 Nástroje představené v této kapitole se soustředí především na prácí s circular
-diagramem nebo linear diagramem, a právě pouze pro tyto diagramy nabízí nějaké
+diagramem nebo arc diagramem, a právě pouze pro tyto diagramy nabízí nějaké
 metody pro porovnávání omezeného množství sekundárních struktur RNA. Forna
 podporuje pouze radial diagram, ale porovnávání dvou struktur, které sice jdou
 zobrazit vedle sebe, už nijak neusnadňuje. 
@@ -158,12 +160,12 @@ možnost použití na webu, ale k tomu používá Java Applets
 které jsou od roku 2017 považované za zastaralé
 \footnote{https://www.oracle.com/java/technologies/javase/9-deprecated-features.html}.
 
-Za nejpodobnější projekt bychom považovali R-chie, který se snaží usnadnit
-porovnávání sekundárních RNA struktur a nabízí i knihovnu napsanou v jazyce R.
-Liší se pak v samotném přístupu, protože jejich rozhraní generuje pouze
-statické circular nebo linear diagramy.
+Ze zmíněných projektů je nejpodobnější tomu našemu R-chie, který se snaží
+usnadnit porovnávání sekundárních RNA struktur a nabízí i knihovnu napsanou v
+jazyce R. Liší se pak v samotném přístupu, protože jejich rozhraní generuje
+pouze statické circular nebo arc diagramy.
 
-\section{Příbuzné projekty} 
+\section{Kreslení grafů na základě šablony}
 
 Níže jsou zmíněné dva projekty, které úzce souvisí s naší knihovnou, protože
 produkují data ve formátu, se kterým pracuje naše knihovna a metody
@@ -181,12 +183,17 @@ rozložení a na výstupu dá rozložení cílové struktury. Je to tedy command
 open source nástroj schopný rychle generovat rozložení i pro největší RNA
 struktury za poskytnutí dostatečně podobného rozložení.
 
+Do vzniku Traveleru neexistoval žádný nástroj, který by dokázal velké struktury
+vizualizovat ve standardni notaci, se kterou jsou biologové naučení pracovat a
+porovnávat struktury napříč druhům.
+
 \subsection{R2DT} 
 
 R2DT\cite{R2DT2021} je metoda pro predikci a vizualizaci široké škály
-sekundárních RNA struktur ve radial diagramu. R2DT je postaveno na
-knihovně se 3 647 vzory reprezentujícími většinu známých RNA struktur. R2DT se
-používá na ncRNA sekvencích z RNAcentral\footnote{https://rnacentral.org/}
-databáze a vytvořila více než 13 miliónů diagramů, čímž tvoří největší světovou
-sadu dat s 2D RNA strukturami. Pro vizualizaci neboli 2D rozložení používá R2DT
-právě výše zmíněný nástroj Traveler.
+sekundárních RNA struktur ve radial diagramu. R2DT je postaveno na knihovně se
+3 647 vzory reprezentujícími většinu známých RNA struktur. R2DT se používá na
+ncRNA\footnote{RNA, která se nepřekládá do proteinů} (non-coding RNA)
+sekvencích z RNAcentral\footnote{https://rnacentral.org/} databáze a vytvořila
+více než 27 miliónů diagramů\footnote{Číslo je aktuální k datu 11.4. 2023},
+čímž tvoří největší světovou sadu dat s 2D RNA strukturami. Pro vizualizaci
+neboli 2D rozložení používá R2DT právě výše zmíněný nástroj Traveler.
