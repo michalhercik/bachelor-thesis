@@ -1,0 +1,11 @@
+@startuml
+class Title {
+    -texts: Text[]
+    -background: Rectangle
+    -styles: Styles
+    +getTexts(): Text[]
+    +getBackground(): Rectangle
+    +draw(ctx: CanvasRenderingContext2D): void
+    +{static} fromResidues(residues: Residue[], canvasWidth: number, canvasHeight: number, styles: Styles): Title
+}
+@enduml

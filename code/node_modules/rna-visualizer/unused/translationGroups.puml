@@ -1,0 +1,14 @@
+@startuml
+class TranslationGroup {
+    +xShift: number
+    +yShift: number
+    +members: Residue[]
+    +push(member: Residue): void
+    +size(): number
+    +has(index: number): boolean
+}
+class TranslationGroups {
+    +{static} create(contA: DataContainer, contB: DataContainer, group?: TranslationGroup, filter?: number): TranslationGroup[]
+    +{static} getBest(groups: TranslationGroup[]): TranslationGroup
+}
+@enduml

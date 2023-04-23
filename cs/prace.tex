@@ -58,6 +58,23 @@
 \usepackage{xcolor}         % barevná sazba
 \usepackage{float}	    % nevložit figure až na novou stránku
 
+\makeatletter
+\renewcommand{\@makefntext}[1]{%
+  \setlength{\parindent}{0pt}%
+  \begin{list}{}{%
+    \setlength{\labelwidth}{1.5em}% <===================================
+    \setlength{\leftmargin}{\labelwidth}%
+    \setlength{\labelsep}{3pt}%
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parsep}{0pt}%
+    \setlength{\topsep}{0pt}%
+    \setlength{\rightmargin}{0.2\textwidth}%
+    \footnotesize}%
+  \item[\@makefnmark\hfil]#1%
+  \end{list}%
+}
+\makeatother
+
 %%% Údaje o práci
 
 % Název práce v jazyce práce (přesně podle zadání)

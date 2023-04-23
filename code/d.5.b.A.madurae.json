@@ -1,0 +1,2512 @@
+{
+  "classes": [
+    {
+      "font-family": "Helvetica",
+      "font-size": "8.334300px",
+      "font-weight": "bold",
+      "name": "font"
+    },
+    {
+      "name": "numbering-line",
+      "stroke": "rgb(204, 204, 204)",
+      "stroke-width": 0.5209
+    },
+    {
+      "name": "bp-line",
+      "stroke-width": 1.0418
+    }
+  ],
+  "rnaComplexes": [
+    {
+      "name": "complex",
+      "rnaMolecules": [
+        {
+          "basePairs": [
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 1,
+              "residueIndex2": 120
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 2,
+              "residueIndex2": 119
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 3,
+              "residueIndex2": 118
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 4,
+              "residueIndex2": 117
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 5,
+              "residueIndex2": 116
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 6,
+              "residueIndex2": 115
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 7,
+              "residueIndex2": 114
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 8,
+              "residueIndex2": 113
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 9,
+              "residueIndex2": 112
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 10,
+              "residueIndex2": 111
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 16,
+              "residueIndex2": 68
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 17,
+              "residueIndex2": 67
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 18,
+              "residueIndex2": 65
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 19,
+              "residueIndex2": 64
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 20,
+              "residueIndex2": 63
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 21,
+              "residueIndex2": 62
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 22,
+              "residueIndex2": 61
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 23,
+              "residueIndex2": 60
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 28,
+              "residueIndex2": 56
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 29,
+              "residueIndex2": 55
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 30,
+              "residueIndex2": 54
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 31,
+              "residueIndex2": 51
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 32,
+              "residueIndex2": 50
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 33,
+              "residueIndex2": 49
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 34,
+              "residueIndex2": 48
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 34,
+              "residueIndex2": 48
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 33,
+              "residueIndex2": 49
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 32,
+              "residueIndex2": 50
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 31,
+              "residueIndex2": 51
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 30,
+              "residueIndex2": 54
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 29,
+              "residueIndex2": 55
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 28,
+              "residueIndex2": 56
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 23,
+              "residueIndex2": 60
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 22,
+              "residueIndex2": 61
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 21,
+              "residueIndex2": 62
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 20,
+              "residueIndex2": 63
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 19,
+              "residueIndex2": 64
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 18,
+              "residueIndex2": 65
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 17,
+              "residueIndex2": 67
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 16,
+              "residueIndex2": 68
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 70,
+              "residueIndex2": 107
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 71,
+              "residueIndex2": 106
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 72,
+              "residueIndex2": 105
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 73,
+              "residueIndex2": 104
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 74,
+              "residueIndex2": 103
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 75,
+              "residueIndex2": 102
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 76,
+              "residueIndex2": 101
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 79,
+              "residueIndex2": 98
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 80,
+              "residueIndex2": 97
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 81,
+              "residueIndex2": 96
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 82,
+              "residueIndex2": 95
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 83,
+              "residueIndex2": 94
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 84,
+              "residueIndex2": 93
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 85,
+              "residueIndex2": 92
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 86,
+              "residueIndex2": 91
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 86,
+              "residueIndex2": 91
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 85,
+              "residueIndex2": 92
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 84,
+              "residueIndex2": 93
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 83,
+              "residueIndex2": 94
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 82,
+              "residueIndex2": 95
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 81,
+              "residueIndex2": 96
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 80,
+              "residueIndex2": 97
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 79,
+              "residueIndex2": 98
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 76,
+              "residueIndex2": 101
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 75,
+              "residueIndex2": 102
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 74,
+              "residueIndex2": 103
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 73,
+              "residueIndex2": 104
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 72,
+              "residueIndex2": 105
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 71,
+              "residueIndex2": 106
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 70,
+              "residueIndex2": 107
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 10,
+              "residueIndex2": 111
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 9,
+              "residueIndex2": 112
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 8,
+              "residueIndex2": 113
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 7,
+              "residueIndex2": 114
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 6,
+              "residueIndex2": 115
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 5,
+              "residueIndex2": 116
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 4,
+              "residueIndex2": 117
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 3,
+              "residueIndex2": 118
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 2,
+              "residueIndex2": 119
+            },
+            {
+              "basePairType": "canonical",
+              "classes": [
+                "bp-line"
+              ],
+              "residueIndex1": 1,
+              "residueIndex2": 120
+            }
+          ],
+          "labels": [
+            {
+              "labelContent": {
+                "classes": [
+                  "font",
+                  "numbering-label",
+                  "sequential"
+                ],
+                "label": "10",
+                "x": 59.644747161332475,
+                "y": 78.25430705107294
+              },
+              "labelLine": {
+                "classes": [
+                  "numbering-line",
+                  "sequential"
+                ],
+                "x1": 47.84805715473482,
+                "x2": 54.64416713661325,
+                "y1": 85.32144852967986,
+                "y2": 81.25004623638867
+              },
+              "residueIndex": 10
+            },
+            {
+              "labelContent": {
+                "classes": [
+                  "font",
+                  "numbering-label",
+                  "sequential"
+                ],
+                "label": "20",
+                "x": 93.0583518020282,
+                "y": 102.33914228786455
+              },
+              "labelLine": {
+                "classes": [
+                  "numbering-line",
+                  "sequential"
+                ],
+                "x1": 93.0583518020282,
+                "x2": 93.0583518020282,
+                "y1": 116.09073796947212,
+                "y2": 106.50629230846391
+              },
+              "residueIndex": 20
+            },
+            {
+              "labelContent": {
+                "classes": [
+                  "font",
+                  "numbering-label",
+                  "sequential"
+                ],
+                "label": "30",
+                "x": 158.0583518020282,
+                "y": 102.33914228786455
+              },
+              "labelLine": {
+                "classes": [
+                  "numbering-line",
+                  "sequential"
+                ],
+                "x1": 158.0583518020282,
+                "x2": 158.0583518020282,
+                "y1": 116.09073796947212,
+                "y2": 106.50629230846391
+              },
+              "residueIndex": 30
+            },
+            {
+              "labelContent": {
+                "classes": [
+                  "font",
+                  "numbering-label",
+                  "sequential"
+                ],
+                "label": "50",
+                "x": 175.0583518020282,
+                "y": 159.8434939037703
+              },
+              "labelLine": {
+                "classes": [
+                  "numbering-line",
+                  "sequential"
+                ],
+                "x1": 175.0583518020282,
+                "x2": 175.0583518020282,
+                "y1": 146.09189822216274,
+                "y2": 155.67634388317094
+              },
+              "residueIndex": 50
+            },
+            {
+              "labelContent": {
+                "classes": [
+                  "font",
+                  "numbering-label",
+                  "sequential"
+                ],
+                "label": "100",
+                "x": 0.0,
+                "y": 195.12852873661245
+              },
+              "labelLine": {
+                "classes": [
+                  "numbering-line",
+                  "sequential"
+                ],
+                "x1": 12.95679140544587,
+                "x2": 7.5008697509765625,
+                "y1": 199.7359076298847,
+                "y2": 197.79580552531712
+              },
+              "residueIndex": 100
+            }
+          ],
+          "name": "molecule",
+          "sequence": [
+            {
+              "classes": [
+                "text-green",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 0,
+              "residueName": "5'",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 0,
+              "templateResidueName": "5'",
+              "x": 43.5583518020282,
+              "y": 7.891293096093477
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 1,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 1,
+              "templateResidueName": "C",
+              "x": 43.5583518020282,
+              "y": 15.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 2,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 2,
+              "templateResidueName": "G",
+              "x": 43.5583518020282,
+              "y": 23.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 3,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 3,
+              "templateResidueName": "U",
+              "x": 43.5583518020282,
+              "y": 31.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 4,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 4,
+              "templateResidueName": "U",
+              "x": 43.5583518020282,
+              "y": 39.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 5,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 5,
+              "templateResidueName": "C",
+              "x": 43.5583518020282,
+              "y": 47.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 6,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 6,
+              "templateResidueName": "G",
+              "x": 43.5583518020282,
+              "y": 55.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 7,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 7,
+              "templateResidueName": "G",
+              "x": 43.5583518020282,
+              "y": 63.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 8,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 8,
+              "templateResidueName": "U",
+              "x": 43.5583518020282,
+              "y": 71.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 9,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 9,
+              "templateResidueName": "G",
+              "x": 43.5583518020282,
+              "y": 79.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 10,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 10,
+              "templateResidueName": "G",
+              "x": 43.5583518020282,
+              "y": 87.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 11,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 11,
+              "templateResidueName": "U",
+              "x": 50.0583518020282,
+              "y": 90.74131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 12,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 12,
+              "templateResidueName": "U",
+              "x": 55.448351802028185,
+              "y": 95.12131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 13,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 13,
+              "templateResidueName": "U",
+              "x": 59.478351802028214,
+              "y": 100.79131809581745
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 14,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 14,
+              "templateResidueName": "U",
+              "x": 61.83835180202817,
+              "y": 107.33131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 15,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 15,
+              "templateResidueName": "G",
+              "x": 62.3683518020282,
+              "y": 114.26131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 16,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 16,
+              "templateResidueName": "G",
+              "x": 61.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 17,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 17,
+              "templateResidueName": "C",
+              "x": 69.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 18,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 18,
+              "templateResidueName": "G",
+              "x": 77.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 19,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 19,
+              "templateResidueName": "A",
+              "x": 85.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 20,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 20,
+              "templateResidueName": "G",
+              "x": 93.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 21,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 21,
+              "templateResidueName": "G",
+              "x": 101.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 22,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 22,
+              "templateResidueName": "G",
+              "x": 109.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 23,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 23,
+              "templateResidueName": "G",
+              "x": 117.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 24,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 24,
+              "templateResidueName": "G",
+              "x": 118.65835180202822,
+              "y": 112.69131809581745
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 25,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 25,
+              "templateResidueName": "A",
+              "x": 125.25835180202819,
+              "y": 107.19131809581745
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 26,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 26,
+              "templateResidueName": "A",
+              "x": 133.8583518020282,
+              "y": 107.19131809581745
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 27,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 27,
+              "templateResidueName": "A",
+              "x": 140.45835180202818,
+              "y": 112.59131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 28,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 28,
+              "templateResidueName": "C",
+              "x": 142.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 29,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 29,
+              "templateResidueName": "A",
+              "x": 150.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 30,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 30,
+              "templateResidueName": "C",
+              "x": 158.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 31,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 31,
+              "templateResidueName": "C",
+              "x": 167.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 32,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 32,
+              "templateResidueName": "C",
+              "x": 175.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 33,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 33,
+              "templateResidueName": "G",
+              "x": 183.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 34,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 34,
+              "templateResidueName": "G",
+              "x": 191.0583518020282,
+              "y": 121.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 35,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 35,
+              "templateResidueName": "U",
+              "x": 196.2583518020282,
+              "y": 114.39131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 36,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 36,
+              "templateResidueName": "C",
+              "x": 203.5583518020282,
+              "y": 110.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 37,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 37,
+              "templateResidueName": "C",
+              "x": 212.0583518020282,
+              "y": 108.79131809581745
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 38,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 38,
+              "templateResidueName": "C",
+              "x": 220.3583518020282,
+              "y": 110.79131809581745
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 39,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 39,
+              "templateResidueName": "A",
+              "x": 227.2583518020282,
+              "y": 115.59131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 40,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 40,
+              "templateResidueName": "U",
+              "x": 231.8583518020282,
+              "y": 122.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 41,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 41,
+              "templateResidueName": "U",
+              "x": 233.45835180202818,
+              "y": 131.19131809581745
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 42,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 42,
+              "templateResidueName": "C",
+              "x": 231.8583518020282,
+              "y": 139.59131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 43,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 43,
+              "templateResidueName": "C",
+              "x": 227.15835180202822,
+              "y": 146.59131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 44,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 44,
+              "templateResidueName": "G",
+              "x": 220.2583518020282,
+              "y": 151.59131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 45,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 45,
+              "templateResidueName": "A",
+              "x": 211.95835180202818,
+              "y": 153.49131809581746
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 46,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 46,
+              "templateResidueName": "A",
+              "x": 203.5583518020282,
+              "y": 152.19131809581745
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 47,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 47,
+              "templateResidueName": "C",
+              "x": 196.15835180202822,
+              "y": 147.79131809581742
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 48,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 48,
+              "templateResidueName": "C",
+              "x": 191.0583518020282,
+              "y": 141.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 49,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 49,
+              "templateResidueName": "C",
+              "x": 183.0583518020282,
+              "y": 140.99131809581746
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 50,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 50,
+              "templateResidueName": "G",
+              "x": 175.0583518020282,
+              "y": 141.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 51,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 51,
+              "templateResidueName": "G",
+              "x": 167.0583518020282,
+              "y": 140.99131809581746
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 52,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 52,
+              "templateResidueName": "A",
+              "x": 166.5583518020282,
+              "y": 149.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 53,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 53,
+              "templateResidueName": "A",
+              "x": 158.5583518020282,
+              "y": 149.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 54,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 54,
+              "templateResidueName": "G",
+              "x": 158.0583518020282,
+              "y": 141.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 55,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 55,
+              "templateResidueName": "U",
+              "x": 150.0583518020282,
+              "y": 141.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 56,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 56,
+              "templateResidueName": "U",
+              "x": 142.0583518020282,
+              "y": 141.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 57,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 57,
+              "templateResidueName": "A",
+              "x": 137.5583518020282,
+              "y": 147.78131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 58,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 58,
+              "templateResidueName": "A",
+              "x": 129.6283518020282,
+              "y": 150.31131809581746
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 59,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 59,
+              "templateResidueName": "G",
+              "x": 121.6883518020282,
+              "y": 147.84131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 60,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 60,
+              "templateResidueName": "C",
+              "x": 117.0583518020282,
+              "y": 141.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 61,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 61,
+              "templateResidueName": "C",
+              "x": 109.0583518020282,
+              "y": 141.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 62,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 62,
+              "templateResidueName": "U",
+              "x": 101.0583518020282,
+              "y": 141.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 63,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 63,
+              "templateResidueName": "C",
+              "x": 93.0583518020282,
+              "y": 141.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 64,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 64,
+              "templateResidueName": "U",
+              "x": 85.0583518020282,
+              "y": 141.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 65,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 65,
+              "templateResidueName": "C",
+              "x": 77.0583518020282,
+              "y": 141.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 66,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 66,
+              "templateResidueName": "A",
+              "x": 73.0583518020282,
+              "y": 148.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 67,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 67,
+              "templateResidueName": "G",
+              "x": 69.0583518020282,
+              "y": 141.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 68,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 68,
+              "templateResidueName": "C",
+              "x": 61.0583518020282,
+              "y": 141.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 69,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 69,
+              "templateResidueName": "G",
+              "x": 52.28835180202822,
+              "y": 142.00131809581745
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 70,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 70,
+              "templateResidueName": "C",
+              "x": 43.5583518020282,
+              "y": 146.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 71,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 71,
+              "templateResidueName": "C",
+              "x": 43.5583518020282,
+              "y": 154.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 72,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 72,
+              "templateResidueName": "G",
+              "x": 43.54835180202821,
+              "y": 162.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 73,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 73,
+              "templateResidueName": "A",
+              "x": 43.5583518020282,
+              "y": 170.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 74,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 74,
+              "templateResidueName": "U",
+              "x": 43.5583518020282,
+              "y": 178.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 75,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 75,
+              "templateResidueName": "G",
+              "x": 43.54835180202821,
+              "y": 186.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 76,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 76,
+              "templateResidueName": "G",
+              "x": 43.54835180202821,
+              "y": 194.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 77,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 77,
+              "templateResidueName": "U",
+              "x": 50.6183518020282,
+              "y": 201.16131809581742
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 78,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 78,
+              "templateResidueName": "A",
+              "x": 50.57835180202818,
+              "y": 211.11131809581747
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 79,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 79,
+              "templateResidueName": "C",
+              "x": 43.498351802028196,
+              "y": 218.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 80,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 80,
+              "templateResidueName": "U",
+              "x": 43.51835180202818,
+              "y": 226.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 81,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 81,
+              "templateResidueName": "G",
+              "x": 43.54835180202821,
+              "y": 234.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 82,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 82,
+              "templateResidueName": "C",
+              "x": 43.56835180202819,
+              "y": 242.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 83,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 83,
+              "templateResidueName": "A",
+              "x": 43.58835180202817,
+              "y": 250.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 84,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 84,
+              "templateResidueName": "U",
+              "x": 43.528351802028226,
+              "y": 258.0913180958174
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 85,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 85,
+              "templateResidueName": "G",
+              "x": 43.50835180202819,
+              "y": 266.0913180958174
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 86,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 86,
+              "templateResidueName": "G",
+              "x": 43.528351802028226,
+              "y": 274.0913180958174
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 87,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 87,
+              "templateResidueName": "G",
+              "x": 43.66835180202821,
+              "y": 282.5413180958174
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 88,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 88,
+              "templateResidueName": "A",
+              "x": 37.75835180202819,
+              "y": 288.58131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 89,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 89,
+              "templateResidueName": "G",
+              "x": 29.3083518020282,
+              "y": 288.5913180958174
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 90,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 90,
+              "templateResidueName": "A",
+              "x": 23.38835180202821,
+              "y": 282.56131809581746
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 91,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 91,
+              "templateResidueName": "C",
+              "x": 23.528351802028197,
+              "y": 274.0913180958174
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 92,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 92,
+              "templateResidueName": "U",
+              "x": 23.548351802028208,
+              "y": 266.0913180958174
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 93,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 93,
+              "templateResidueName": "G",
+              "x": 23.518351802028207,
+              "y": 258.0913180958174
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 94,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 94,
+              "templateResidueName": "U",
+              "x": 23.5883518020282,
+              "y": 250.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 95,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 95,
+              "templateResidueName": "G",
+              "x": 23.56835180202819,
+              "y": 242.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 96,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 96,
+              "templateResidueName": "U",
+              "x": 23.53835180202819,
+              "y": 234.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 97,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 97,
+              "templateResidueName": "G",
+              "x": 23.5583518020282,
+              "y": 226.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 98,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 98,
+              "templateResidueName": "G",
+              "x": 23.53835180202819,
+              "y": 218.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 99,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 99,
+              "templateResidueName": "G",
+              "x": 17.658351802028193,
+              "y": 210.71131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 100,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 100,
+              "templateResidueName": "A",
+              "x": 17.668351802028212,
+              "y": 201.41131809581742
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 101,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 101,
+              "templateResidueName": "G",
+              "x": 23.56835180202819,
+              "y": 194.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 102,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 102,
+              "templateResidueName": "A",
+              "x": 23.56835180202819,
+              "y": 186.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 103,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 103,
+              "templateResidueName": "G",
+              "x": 23.5583518020282,
+              "y": 178.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 104,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 104,
+              "templateResidueName": "U",
+              "x": 23.5583518020282,
+              "y": 170.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 105,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 105,
+              "templateResidueName": "A",
+              "x": 23.56835180202819,
+              "y": 162.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 106,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 106,
+              "templateResidueName": "G",
+              "x": 23.5583518020282,
+              "y": 154.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 107,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 107,
+              "templateResidueName": "G",
+              "x": 23.5583518020282,
+              "y": 146.09131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 108,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 108,
+              "templateResidueName": "A",
+              "x": 8.288351802028188,
+              "y": 134.84131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 109,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 109,
+              "templateResidueName": "C",
+              "x": 2.5583518020281986,
+              "y": 116.91131809581742
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 110,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 110,
+              "templateResidueName": "A",
+              "x": 8.378351802028192,
+              "y": 99.02131809581743
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 111,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 111,
+              "templateResidueName": "C",
+              "x": 23.5583518020282,
+              "y": 87.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 112,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 112,
+              "templateResidueName": "C",
+              "x": 23.5583518020282,
+              "y": 79.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 113,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 113,
+              "templateResidueName": "G",
+              "x": 23.5583518020282,
+              "y": 71.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 114,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 114,
+              "templateResidueName": "C",
+              "x": 23.5583518020282,
+              "y": 63.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 115,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 115,
+              "templateResidueName": "C",
+              "x": 23.5583518020282,
+              "y": 55.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 116,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 116,
+              "templateResidueName": "G",
+              "x": 23.5583518020282,
+              "y": 47.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 117,
+              "residueName": "G",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 117,
+              "templateResidueName": "G",
+              "x": 23.5583518020282,
+              "y": 39.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 118,
+              "residueName": "A",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 118,
+              "templateResidueName": "A",
+              "x": 23.5583518020282,
+              "y": 31.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 119,
+              "residueName": "C",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 119,
+              "templateResidueName": "C",
+              "x": 23.5583518020282,
+              "y": 23.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 120,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 120,
+              "templateResidueName": "U",
+              "x": 23.5583518020282,
+              "y": 15.89131809581744
+            },
+            {
+              "classes": [
+                "text-black",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 121,
+              "residueName": "U",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 121,
+              "templateResidueName": "U",
+              "x": 23.5583518020282,
+              "y": 7.891293096093477
+            },
+            {
+              "classes": [
+                "text-green",
+                "font"
+              ],
+              "info": "",
+              "residueIndex": 122,
+              "residueName": "3'",
+              "templateNumberingLabel": "",
+              "templateResidueIndex": 122,
+              "templateResidueName": "3'",
+              "x": 24.872845342428974,
+              "y": 0.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

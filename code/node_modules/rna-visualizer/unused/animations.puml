@@ -1,0 +1,69 @@
+@startuml
+interface IAnimation {
+    +changeState(index: number, isActive: boolean): void
+    +do(elapsed: number): void
+    +reverse(): void
+    +animate(rna: RnaVis, duration: number, after: AfterFn): void
+    +instant(): void
+}
+class SingleCoorTarget {
+    +coor: Vector2
+    +getX(): number
+    +getY(): number
+}
+class TranslationAnim implements IAnimation {
+    +container: DataContainer[]
+    +from: PositionRecord[]
+    +to: PositionRecord[]
+    +isActive: boolean[]
+    -reversed: boolean
+    +isReversed(): boolean
+    +setState(isActive: boolean[]): void
+    +getState(): boolean[]
+    +changeState(index: number, isActive: boolean): void
+    +changeAllStates(isActive: boolean): void
+    +updateFrom(): void
+    +setFrom(from: PositionRecord[]): void
+    +do(elapsed: number): void
+    +reverse(): void
+    +animate(rna: RnaVis, duration: number, after?: AfterFn): void
+    +instant(): void
+    +getActiveContainers(): DataContainer[]
+}
+class VisibilityAnim implements IAnimation {
+    +visibilityRecords: VisibilityRecord[]
+    +changeState(index: number, isActive: boolean): void
+    +do(elapsed: number): void
+    +reverse(): void
+    +animate(rna: RnaVis, duration: number, after?: AfterFn): void
+    +instant(): void
+    -maxIndex(): number
+}
+class PositionRecord {
+    +labelLines: Map<string, DoubleCoorTarget>
+    +labelTexts: Map<string, SingleCoorTarget>
+    +residues: Map<string, SingleCoorTarget>
+    +{static} fromDataContainer(container: DataContainer): PositionRecord
+    +{static} fromTemplate(container: DataContainer, template: DataContainer): PositionRecord
+    +{static} fromTranslation(container: DataContainer, shift: Vector2): PositionRecord
+}
+class VisibilityRecord {
+    +residues: Residue[]
+    +to: boolean[]
+    +active: boolean
+    +setActive(active: boolean): void
+    +isActive(): boolean
+}
+class DoubleCoorTarget {
+    +coor1: Vector2
+    +coor2: Vector2
+    +getX1(): number
+    +getY1(): number
+    +getX2(): number
+    +getY2(): number
+}
+TranslationAnim --> PositionRecord
+VisibilityAnim --> VisibilityRecord
+PositionRecord --> DoubleCoorTarget
+PositionRecord --> SingleCoorTarget
+@enduml

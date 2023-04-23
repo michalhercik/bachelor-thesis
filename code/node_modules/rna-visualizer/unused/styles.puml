@@ -1,0 +1,13 @@
+@startuml
+class Styles {
+    -default: Map<string, object>
+    +styles: Map<string, object>
+    +addFrom(classes: object[]): void
+    +set(name: string, value: object): void
+    +get(names: string[]): any
+    +getProperty(names: string[], property: string): string
+    +reset(): void
+    +{static} TRANSFORMED_CLASS: string
+    +{static} randomHexColor(): string
+}
+@enduml

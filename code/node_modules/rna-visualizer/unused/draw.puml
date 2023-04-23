@@ -1,0 +1,8 @@
+@startuml
+class Draw {
+    +{static} Lines(lines: ILine[], ctx: CanvasRenderingContext2D, styles: Styles): void
+    +{static} Texts(texts: Text[], ctx: CanvasRenderingContext2D, styles: Styles): void
+    +{static} Circles(circles: Circle[], ctx: CanvasRenderingContext2D, styles: Styles): void
+    +{static} Rectangle(rectangle: Rectangle, ctx: CanvasRenderingContext2D, styles: Styles): void
+}
+@enduml

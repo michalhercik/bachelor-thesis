@@ -1,0 +1,69 @@
+@startuml
+class DataContainer {
+    +styles: Styles
+    +width: number
+    +height: number
+    +residues: Residue[]
+    +basePairs: BasePair[]
+    +labels: Label[]
+    +getLines(): ILine[]
+    +getText(): Text[]
+    +getCircles(): Circle[]
+    +update(event: any): void
+    +getResByCoor(x: number, y: number): Residue
+    +getClosestResByCoor(x: number, y: number, maxDistance?: number): Residue
+    +getUnmappableResidues(): Residue[]
+    +getMappableResidues(): Residue[]
+    +translate(shift: Vector2): void
+}
+class MappingLine {
+    +residue1: Residue
+    +residue2: Residue
+    +classes: string[]
+    +visible: boolean
+    +getTransformedX1(): number
+    +getTransformedY1(): number
+    +getTransformedX2(): number
+    +getTransformedY2(): number
+    +getX1(): number
+    +getY1(): number
+    +getX2(): number
+    +getY2(): number
+    +setVisible(visible: boolean): void
+    +isVisible(): boolean
+    +getClasses(): string[]
+    +{static} createMappingLines(template: DataContainer, container: DataContainer, classes?: string[]): MappingLine[]
+}
+class Layer {
+    +name: string
+    +data: DataContainer
+    +mappingLines: MappingLine[]
+    +visible: boolean
+}
+class RnaVis {
+    +canvas: HTMLCanvasElement
+    +layers: Layer[]
+    -styles: Styles
+    -zoom: d3.ZoomBehavior<Element, unknown>
+    +addZoom(): RnaVis
+    +draw(): void
+    +drawHoverLabel(x: number, y: number): void
+    +addLayer(data: IRnaInput, name: string, visible?: boolean): RnaVis
+    +clear(): void
+    +align(groupIndex?: number, minGroupSize?: number): Vector2[]
+    +getAlignmentToTempResidue(tempRes: Residue): Vector2[]
+    +getLayerIndex(name: string): number
+    +translate(translations: Vector2[]): RnaVis
+    +getDefaultAlpha(): number
+    +setAlpha(alpha: number): RnaVis
+    +setVisibility(index: number, visibility: boolean): RnaVis
+    +setVisibilityByName(name: string, visible: boolean): RnaVis
+    +setAllVisibility(visible: boolean): RnaVis
+    +numberingLabelsVisibility(visible: boolean): RnaVis
+    +resetTransform(): RnaVis
+    +getDataContainers(): DataContainer[]
+}
+Layer --> DataContainer
+Layer --> MappingLine
+RnaVis --> Layer
+@enduml

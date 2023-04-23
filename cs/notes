@@ -1,0 +1,14 @@
+## motivace od Hoskzy
+
+RNA ma vice funkci nez se verilo, nezajistuje pouze prenost geneticke informcae
+spoustu funkci enzematicky (regulace genove esprese)
+dulezite zkoumat jak funguji
+funkce odvozena od jejich 3d struktury
+lide jsou zvykli pracovat se sekundárníma sturkturama
+Existuji databaze
+zkoumat jak se lisi across species (je to tezke)
+future: soustředit se na families
+
+## poznamky
+
+ - generovani stromové reprezentace (pouziti bp2graph, graphviz)
