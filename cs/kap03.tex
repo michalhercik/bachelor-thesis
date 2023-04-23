@@ -5,7 +5,7 @@
 \subsection{Struktura dat}
 
 Jedná se o data ve formátu JSON, obsahující všechny potřebné informace o
-rozložení nukleotidů, jejich párování, velikosti popisků, barvách a tlouštkách
+rozložení nukleotidů, jejich párování, velikosti popisků, barvách a tloušťkách
 čar. Kromě informací o rozložení lze z nich také vyčíst informace o potřebných
 editacích vzorové sekundární struktury.
 
@@ -16,14 +16,14 @@ informací lze jednoduše zjistit, jestli je nukleotid přidaný nebo přejmenov
 a pokud máme k dispozici i data vzorové struktury, lze pomocí indexu porovnávat
 jejich souřadnice.
 
-V rámci R2DT projektu vzníká JSON
+V rámci R2DT projektu vzniká JSON
 schéma\footnote{https://github.com/LDWLab/RNA2D-data-schema}, které by mělo
 popisovat strukturu vstupních dat. Schéma je stále ve vývoji, proto aktuální
-výstupy Traveleru neodpovídájí schématu a je dost možné, že se formát výstupu
+výstupy Traveleru neodpovídají schématu a je dost možné, že se formát výstupu
 bude v budoucnu ještě měnit a naše knihovna se jim bude přizpůsobovat.
 
 Samotná struktura dat není složitá, ale popíšeme zde pouze tu část, kterou
-aktuálně využíváme, kromě toho, že ostatní data pro nás nejsou duležitá, tak
+aktuálně využíváme, kromě toho, že ostatní data pro nás nejsou důležitá, tak
 jak již bylo zmíněno samotná struktura dat není pevně daná a může se měnit.
 
 Jedná se o objekt, který má dvě položky - \texttt{rnaComplexes} a
@@ -55,7 +55,7 @@ sekundárních RNA struktur. Pro přístup k databázi lze použít jak
 API\footnote{https://rnacentral.org/api}, tak přímo posílat SQL
 dotazy\footnote{https://rnacentral.org/help/public-database}.
 
-Bohužel nezpřístupňuje mapování nukletidů na vzorovou strukturu, přesto je
+Bohužel nezpřístupňuje mapování nukleotidů na vzorovou strukturu, přesto je
 databáze užitečná pro získání vstupních dat, protože obsahuje struktury a ke
 každé takové struktuře informaci, ze které byla vygenerovaná. 
 
@@ -70,7 +70,7 @@ strukturu použít pro vygenerování vstupních dat.
 
 V následující části se pokusíme čtenáře seznámit s objektovým návrhem naší
 knihovny. V této části dáme obecný pohled na strukturu tříd a později i ukážeme
-jak se s třídama dá pracovat.
+jak se s třídami dá pracovat.
 
 Srdcem celé knihovny je třída \texttt{RnaVis}. Má v sobě uložené vrstvy
 realizované třídou \texttt{Layer}, představující jednotlivé struktury. Třída
@@ -81,7 +81,7 @@ Pro určení vykreslovacích parametrů (např. font, barva, velikost) objektů 
 třídu \texttt{Styles}. Před každým vykreslením se zeptáme této třídy na
 vykreslovací parametry pro daný objekt. Důvod, proč jsme zvolili takovéhle
 řešení problému je, že jsme původně neměli jasnou představu, co a jak bude
-řešené, a proto nám příšlo nejjednoduší tuto část oddělit a použít stejný
+řešené, a proto nám přišlo nejjednodušší tuto část oddělit a použít stejný
 způsob, jaký se používá ve vstupních datech.
 
 Poslední důležitou velkou částí jsou animace. Tuto funkcionalitu zpřístupňují
@@ -117,12 +117,12 @@ dokumentace\footnote{https://github.com/michalhercik/rna-visualizer/blob/main/li
 
 S obecnou strukturou kódu jsme čtenáře seznámili a nyní se pokusíme ukázat, jak
 lze knihovnu užívat. Bude se jednat o ukázku implementací základních využití,
-jako je vykreslení struktur, zarovnání, transformace na vzorovu strukturu a
+jako je vykreslení struktur, zarovnání, transformace na vzorovou strukturu a
 některé další možnosti.
 
 \subsection{Vytvoření objektu RnaVis a vykreslení struktur}
 
-V prvním kroce importujeme veškeré potřebné zdroje. Pužité vstupní data
+V prvním kroce importujeme veškeré potřebné zdroje. Použité vstupní data
 \texttt{d.5.b.A.madurae.json} a \texttt{URS00000B9D9D.json} jsou dostupné na
 GitHub stránce
 projektu\footnote{https://github.com/michalhercik/rna-visualizer/blob/main/demo/example\_data/madurae\\/URS00000B9D9D\_471852-d.5.b.A.madurae.json}
@@ -238,7 +238,7 @@ přidanou strukturou a roztřídí se nukleotidy podle posunutí, které je zaro
 dalších iterací. 
 
 Pokud je parametr prázdný nebo menší než nula, vybere se největší skupina.
-Pokud je parametr větší, než počet vytvořených skupin metoda vyhodí vyjímku se
+Pokud je parametr větší, než počet vytvořených skupin metoda vyhodí výjimku se
 zprávou \texttt{groupIndex >= groups.length}. 
 
 V následující ukázce vytvoříme skupiny, které vzniknout při první iteraci a
@@ -263,7 +263,7 @@ rnaVis
 
 \subsubsection{Zarovnání na nukleotid}
 
-Zarovnání na nukletodi obsahuje podobné kroky. Nejdřív si zvolíme nukleotid ze
+Zarovnání na nukleotid obsahuje podobné kroky. Nejdřív si zvolíme nukleotid ze
 vzorové struktury, na který chceme struktury zarovnávat. Potom na instanci
 třídy \texttt{RnaVis} pomocí metody \texttt{getAlignmentToTempResidue} získáme
 posunutí pro každou strukturu a nakonec struktury zarovnáme a vykreslíme.
@@ -291,7 +291,7 @@ struktury.
 
 Následně vytvoříme objekt typu \texttt{TranslationAnim}, který umožňuje mimo
 jiné animovat transformaci struktury na daný \texttt{PositionRecord}. Potom už
-jenom zavoláme metodu \texttt{animate}, kterou začné celá animace. Jako
+jenom zavoláme metodu \texttt{animate}, kterou začne celá animace. Jako
 parametry bere instanci třídy \texttt{RnaVis}, kterou používá pro vykreslování
 každého snímku animace, trvání animace v milisekundách a poslední volitelný
 parametr je funkce, která se zavolá na konci animace. V ukázce na konci animace
@@ -332,7 +332,7 @@ rnaVis.draw();
 Poslední ukázkou je transformace na vzorovou strukturu. V ukázce nejdříve
 schováme nukleotidy, které nemají vzorový nukleotid. Potom vytvoříme opět
 \texttt{PositionRecord}, tentokrát pomocí statické metody
-\texttt{fromTemplate}, která každýmu nukleotidu dá pozici jeho vzorového
+\texttt{fromTemplate}, která každému nukleotidu dá pozici jeho vzorového
 nukleotidu. Potom už jenom animujeme přechod.
 
 \begin{code}
@@ -356,7 +356,7 @@ new TranslationAnim(containers, targets)
 
 \subsection{Knihovna D3.js}
 
-D3.js\footnote{https://d3js.org/} je knihovna v jayzce Javascript pomáhající
+D3.js\footnote{https://d3js.org/} je knihovna v jazyce Javascript pomáhající
 přivést data k životu podporující především
 SVG\footnote{https://developer.mozilla.org/en-US/docs/Web/SVG}. SVG je webový
 standard, který lze skvěle kombinovat s ostatními standardy jako je CSS,
@@ -387,7 +387,7 @@ který slibuje výrazně lepší výkon a lze ho stále jednoduše používat.
 Některé pro nás klíčové funkce D3.js knihovny lze využít i pro práci s
 canvasem. Konkrétně se jedná o zoom, posouvání a animace.
 
-U canvasu jsme nakonec i zůstali, přestože při práci s desítkama velkých
+U canvasu jsme nakonec i zůstali, přestože při práci s desítkami velkých
 struktur vykreslování není plynulé.
 
 \section{Demonstrace metod}

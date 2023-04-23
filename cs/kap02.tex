@@ -26,7 +26,7 @@ jasná podobnost sekvence.
 
 Na generování obou struktur používá nástroj Traveler stejnou vzorovou
 strukturu, která je v tomto konkrétním případě podobná obou odvozeným
-strukturám. Podobnost odvozených struktur ke vzorové je až na vyjímky běžná, a
+strukturám. Podobnost odvozených struktur ke vzorové je až na výjimky běžná, a
 proto jsme se rozhodli tuto podobnost předpokládat. Následující obrázek je
 vizualizace stejných struktur, za použití nástroje Traveler spolu se vzorovou
 strukturou.
@@ -39,9 +39,9 @@ strukturou.
   struktury d.5.e.S.oshimae.}
 \end{figure}
 
-Přidáním struktury, ze které jsou obě sturktury odvozené, je mnohem jasnější,
+Přidáním struktury, ze které jsou obě struktury odvozené, je mnohem jasnější,
 na která místa koukat pří hledání podobností a rozdílů. Přesto nemusí být
-nějaká podobnost hned jasná, a proto jsme se zaměřili na způsoby, jak znázornít
+nějaká podobnost hned jasná, a proto jsme se zaměřili na způsoby, jak znázornit
 mapování nukleotidů na vzorovou strukturu.
 
 \section{Důsledek využívaní vzorové struktury}
@@ -112,7 +112,7 @@ Na konci první iterace se skupiny, které jsou menší než $x$ odeberou.
 
 V druhé iteraci se postupuje podobně, ale používají se poslední vytvořené
 skupiny na filtrování, tím se snažíme docílit, zarovnání na stejné nukleotidy.
-Filtrování pomocí skupin ingoruje všechny nukleotidy, jejiž vzor není v nějaké
+Filtrování pomocí skupin ignoruje všechny nukleotidy, jejiž vzor není v nějaké
 skupině, pomocí které filtrujeme. Pokud během iterace nevzniknou žádné skupiny,
 řeší se iterace daná iterace zvlášť bez filtrování.
 
@@ -147,7 +147,7 @@ který je stejný, jeho pozice se může v rozložení mírně lišit v důsledk
 generování dat. Tento fakt může způsobit, že popisky nukleotidů vypadají
 rozmazaně.
 
-Jako přímočaré řešení se může zdát posunoutí jednotlivých nukleotidů, které jsou
+Jako přímočaré řešení se může zdát posunutí jednotlivých nukleotidů, které jsou
 blízko sebe, aby dokonale překrývaly jejich vzory. Věříme, že by to vyřešilo
 zmíněný problém bez významné deformace struktury.
 
@@ -158,7 +158,7 @@ zorientování se ve struktuře vzhledem ke vzorové struktuře. Jejich význam 
 následující.
 
 Černá barva značí, že nukleotid leží na poloze vzorového nukleotidu se stejným
-názvem. Zelenou barvou jsou označený ty nukleotidy jejiž vzorový nukleotid bylo
+názvem. Zelenou barvou jsou označený ty nukleotidy jejíž vzorový nukleotid bylo
 třeba přejmenovat. Modrou barvou jsou vyznačený posunutý nukleotid. A poslední
 růžovou barvu mají nově přidané nukleotidy.
 
@@ -205,7 +205,7 @@ které spojují každý nukleotid s jeho vzorovým nukleotidem.
   mapovacíma čárama.}
 \end{figure}
 
-Bohužel tento způsob se zvětšující se velikostí struktury stáva velmi
+Bohužel tento způsob se zvětšující se velikostí struktury stává velmi
 nepřehledným, přesto si myslíme že můžou být užitečné.
 
 \begin{figure}[H]
@@ -219,12 +219,12 @@ nepřehledným, přesto si myslíme že můžou být užitečné.
 
 V projektu Traveler byla použita stromová reprezentace pro sekundární RNA
 strukturu, ve které je vnitřní vrchol, tedy má více jak jednu hranu, bázový pár
-a listem, tedy má jednu nebo žádnou hranu, je nezpárovaný nukleotid. Strom pak
-lze vytvořít následovně. První nepárové nukleotidy ze začátku a z konce přidáme
+a listem, tedy má jednu nebo žádnou hranu, je nespárovaný nukleotid. Strom pak
+lze vytvořit následovně. První nepárové nukleotidy ze začátku a z konce přidáme
 jako samostatné vrcholy. Potom jdeme postupně po bázových párech. První bázový
 pár tvoří kořen. Další bázové páry připojujeme a tvoříme strom. Pokud narazíme
-na nezpárovaný nukleotid přidáme ho jako list k poslednímu přidanému bázovému
-páru. Větvení strukutry vyustí ve větvení stromu. 
+na nespárovaný nukleotid přidáme ho jako list k poslednímu přidanému bázovému
+páru. Větvení struktury vyústí ve větvení stromu. 
 
 \begin{figure}[H]
   \centering
@@ -235,7 +235,7 @@ páru. Větvení strukutry vyustí ve větvení stromu.
 Stromovu strukturu jsme neměli v úmyslu použít na nic konkrétního, ale chtěli
 jsme prozkoumat možnosti lokálních transformací struktury pro dosažení
 zarovnání více podobných částí, které jsou třeba jenom posunuté, jako je to
-například v následující části dvou struktur, které jsou zarovnané dvouma
+například v následující části dvou struktur, které jsou zarovnané dvěma
 způsoby.
 
 \begin{figure}[H]
@@ -261,5 +261,5 @@ stejný výsledek jako s transformací struktury na vzorovou strukturu.
 
 Naše knihovna přímo podporuje překládání a zarovnání struktur na konkrétní
 nukleotid nebo skupinu nukleotidů bez zarovnání na úrovni jednotlivých
-nukletidů pro odstranění rozmazání struktur. Lze transformovat struktury na
+nukleotidů pro odstranění rozmazání struktur. Lze transformovat struktury na
 vzorovou strukturu a upravovat průhlednost struktur.

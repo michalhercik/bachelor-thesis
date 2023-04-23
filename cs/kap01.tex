@@ -1,54 +1,100 @@
 
 \chapter{Úvod do problematiky}
 
-\section {Seznámení s biologickými pojmy}
+\section{RNA}
 
-\subsection{RNA} 
+RNA (Ribonukleová kyselina) je typ nukleové kyseliny, která je nezbytná pro
+různé biologické procesy. Skládá se z dlouhého řetězce nukleotidů obsahujících
+cukr, fosfátovou skupinu a dusíkatou bázi. Čtyři dusíkaté báze v RNA jsou
+adenin, guanin, cytosin a uracil. RNA je transkribována z DNA a může být
+nalezena všude v živých buňkách.
 
-{\color{red}Rozdělit do více kapitol. Jedna z kapitol struktura RNA.}
+\subsection{Funkce}
 
-\subsection{funkce}
+RNA má několik důležitých funkcí v buňkách. Jednou z jejích hlavních funkcí je
+fungovat jako posel mezi DNA a ribozomy během syntézy proteinů. Messenger RNA
+(mRNA) nese genetickou informaci z DNA k ribozomům, které tuto informaci
+používají k vytváření proteinů. Další typy RNA, jako tRNA a rRNA, hrají také
+důležité role v syntéze proteinů.
 
-RNA (zkratka z anglického ribonucleic acid) je biomolekula, která hraje
-klíčovou roli v procesu přenosu genetické informace u všech živých organismů.
-RNA se skládá z řetězce nukleotidů, které obsahují cukr ribózu, fosfátovou
-skupinu a jednu z pěti dusíkatých bází (adenin, guanin, cytosin, uracil nebo
-inosin). Existují různé typy RNA, jako jsou messenger RNA (mRNA), ribozomální
-RNA (rRNA) a transfer RNA (tRNA), které mají každý svou specifickou funkci v
-buňce.
+Nekódující RNA (ncRNA) je druh RNA, která nekóduje proteiny, ale místo toho
+hraje regulační role v buňkách. ncRNA lze rozdělit do dvou širokých kategorií:
+malé ncRNA, které jsou menší než 200 nukleotidů, a dlouhé ncRNA, které jsou
+delší než 200 nukleotidů. Malé ncRNA, jako jsou mikroRNA a siRNA, se účastní
+po-transkripční regulace genů, zatímco dlouhé ncRNA se účastní různých
+buněčných procesů, včetně regulace exprese genů, remodelace chromatinu a
+inaktivace chromozomu X. Dysregulace ncRNA byla spojena s několika nemocemi,
+včetně rakoviny a neurodegenerativních onemocnění.
 
-RNA sekundární struktura se týká způsobu, jakým se molekula RNA skládá na sebe
-díky vzniku bázových párů mezi komplementárními nukleotidy. Bázové párování se
-děje mezi dusíkatými bázemi RNA nukleotidů, přičemž adenin (A) se páruje s
-uracilem (U) a guanin (G) se páruje s cytosinem (C).
+\subsection{Sekundární struktura RNA}
 
-RNA sekundární struktura je důležitá, protože může ovlivnit to, jak RNA
-molekula funguje. Například stem-loop struktura v mRNA molekule může ovlivnit
-přístupnost mRNA k ribozomům, což je buněčný mechanismus zodpovědný za
-překládání mRNA na proteiny.
+Sekundární struktura RNA se týká způsobu, jakým se molekula RNA skládá díky
+párovacím interakcím mezi komplementárními nukleotidy. Existuje několik běžných
+typů (motivů) sekundárních struktur, které může RNA tvořit.
 
-\subsection{struktura}
+\subsubsection{Motivy sekundární struktury RNA}
 
-\subsubsection{Hairpin loop}
+\paragraph{Hairpin loop}
 
-\subsubsection{Bulges}
+Jedním z nejčastějších typů sekundární struktury je hairpin loop, který se
+skládá z jednořetězcové oblasti RNA, která se ohýbá zpět na sebe a vytváří kmen
+(dvouřetězcovou oblast) a smyčku (jednořetězcovou oblast). Hairpin smyčky se
+často nacházejí na koncích molekul RNA a mohou hrát důležité role v stabilitě a
+zpracování RNA.
 
-\subsubsection{multibranch loop}
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=40mm]{../img/kap01/rna/hairpin.png}
+  \caption{Ukázka motivu hairpin loop}
+\end{figure}
+
+\paragraph{Bulge}
+
+Dalším častým typem sekundární struktury je bulge, který zahrnuje jeden
+nukleotid, který není spárovaný s komplementárním nukleotidem v kmenové
+oblasti. Bulges mohou narušit sekundární strukturu RNA, ale také mohou být
+důležité v interakci mezi proteinem a RNA.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=20mm]{../img/kap01/rna/bulge.png}
+  \caption{Ukázka motivu bulge}
+\end{figure}
+
+\paragraph{Multibranch loop}
+
+Multibranch loop je složitější sekundární struktura, která zahrnuje tvorbu více
+stonků a smyček. Tyto struktury mohou být důležité pro skládání a funkci RNA a
+často se nacházejí v molekulách RNA s katalytickou aktivitou, jako jsou
+ribozymy.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=40mm]{../img/kap01/rna/multibranch.png}
+  \caption{Ukázka motivu multibranch loop}
+\end{figure}
+
+Celkově je pochopení sekundární struktury RNA zásadní pro pochopení její
+biologické funkce a toho, jak interaguje s jinými molekulami v buňce.
 
 \section{Vizualizace sekundárních RNA struktur} 
 
 Pro reprezentaci sekundární RNA struktury se používají jak textové, tak
-grafické způsoby. Pro nás jsou nejzajímavějsí ty grafické, ze kterých v této
-části představíme tři nejpoužívanější - arc diagram, circular diagram a
-radiate diagram. Obrázky ukázek diagramu v této části jsou získané za pomoci nástroje
-VARNA\cite{Varna}.
+grafické způsoby, ale ty grafické slouží mnohem lépe k analýze struktur.
+Třídimenzionální reprezentace sekundárních RNA struktur je sice nejpřesnější,
+ale je složité jí získat a proto se stále nejvíce používají dvoudimenzionální
+reprezentace. 
+
+V této části představíme tři nejpoužívanější reprezentace - arc diagram,
+circular diagram a radiate diagram. Obrázky ukázek diagramu v této části jsou
+získané za pomoci nástroje VARNA\cite{Varna}.
 
 V arc diagramu jsou nukleotidy zobrazeny na rovné čáře ve stejném pořadí jako v
 sekvenci a bázové páry nukleotidů jsou spojeny obloukem.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=140mm]{../img/kap01/arc.png}
+  \includegraphics[width=140mm]{../img/kap01/diagrams/arc.png}
   \caption{Ukázka arc diagramu}
 \end{figure}
 
@@ -57,7 +103,7 @@ obvodu kruhu. Bázové páry jsou spojeny buď čárou nebo obloukem.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[height=100mm]{../img/kap01/circular.png}
+  \includegraphics[height=100mm]{../img/kap01/diagrams/circular.png}
   \caption{Ukázka circular diagramu}
 \end{figure}
 
@@ -66,7 +112,7 @@ motivy sekundární struktury, jako jsou hairpins, bulges nebo multibranch loops
 
 \begin{figure}[H]
   \centering
-  \includegraphics[height=100mm]{../img/kap01/radiate.png}
+  \includegraphics[height=100mm]{../img/kap01/diagrams/radiate.png}
   \caption{Ukázka radiate diagramu}
 \end{figure}
 
@@ -77,10 +123,10 @@ motivů sekundární RNA struktury a její interakce.
 
 \section{Podobné projekty} {\color{red} chybi motivacni uvod, ktery by rekl, co chceme delat, aby bylo mozne pochopit podobne k cemu}
 
-Rádi bychom čtenáře seznámili s některými nástroji, které jsou používáné pro
+Rádi bychom čtenáře seznámili s některými nástroji, které jsou používané pro
 vizualizaci sekundárních RNA struktur. Většina z nich jsou programy s
 uživatelským rozhraním a mohlo by se proto zdát zbytečné je zmiňovat nebo
-porovnávat s naší knihovnou. Nicméně u níže zmíněných programů není duležité
+porovnávat s naší knihovnou. Nicméně u níže zmíněných programů není důležité
 řešení samotného uživatelského rozhraní, jako především druh zvolených metod
 pro vizualizaci a následné porovnávání.
 
@@ -101,7 +147,7 @@ sekundárními strukturami RNA.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=140mm]{../img/kap01/varna.png}
+  \includegraphics[width=140mm]{../img/kap01/tools/varna.png}
   \caption{Snimek nástroje Varna. Zobrazená struktura je d.5.b.A.madurae.}
 \end{figure}
 
@@ -117,7 +163,7 @@ diagram oknem skrze nástroj pro výběr zoom. Mezi další funkce patří vypo�
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=140mm]{../img/kap01/rnaStructViz.png}
+  \includegraphics[width=140mm]{../img/kap01/tools/rnaStructViz.png}
   \caption{Snimek nástroje rnaStructViz, zobrazující tři struktury RNA.}
 \end{figure}
 
@@ -132,7 +178,7 @@ strukturu.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=140mm]{../img/kap01/forna.png}
+  \includegraphics[width=140mm]{../img/kap01/tools/forna.png}
   \caption{Snimek nástroje Forna. Nalevo odvozená sekundární RNA
   struktura URS00000B9D9D\_471852 od struktury d.5.b.A.madurae napravo.}
 \end{figure}
@@ -152,21 +198,21 @@ programu lokálně a napříč operačním systémům.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=140mm]{../img/kap01/rchie.jpeg}
+  \includegraphics[width=140mm]{../img/kap01/tools/rchie.jpeg}
   \caption{Výsledný arc diagram nástroje R-chie, zobrazující dvě sturktury.
   První struktura je nad horizontální čárou a druhá pod ní.}
 \end{figure}
 
 \subsection{Shrnutí existujících nástrojů}
 
-Nástroje představené v této kapitole se soustředí především na prácí s circular
+Nástroje představené v této kapitole se soustředí především na práci s circular
 diagramem nebo arc diagramem, a právě pouze pro tyto diagramy nabízí nějaké
 metody pro porovnávání omezeného množství sekundárních struktur RNA. Forna
 podporuje pouze radial diagram, ale porovnávání dvou struktur, které sice jdou
 zobrazit vedle sebe, už nijak neusnadňuje. 
 
-Varna Podporuje všechny tři zmíněné diagrami, ale nelze ani zobrazit dvě
-sekundární rna struktury vedle sebe. Velkou výhodou nástroje VARNA by byla
+Varna Podporuje všechny tři zmíněné diagramy, ale nelze ani zobrazit dvě
+sekundární RNA struktury vedle sebe. Velkou výhodou nástroje VARNA by byla
 možnost použití na webu, ale k tomu používá Java Applets
 \footnote{https://docs.oracle.com/javase/tutorial/deployment/applet/index.html},
 které jsou od roku 2017 považované za zastaralé
@@ -196,16 +242,22 @@ open source nástroj schopný rychle generovat rozložení i pro největší RNA
 struktury za poskytnutí dostatečně podobného rozložení.
 
 Do vzniku Traveleru neexistoval žádný nástroj, který by dokázal velké struktury
-vizualizovat ve standardni notaci, se kterou jsou biologové naučení pracovat a
+vizualizovat ve standardní notaci, se kterou jsou biologové naučení pracovat a
 porovnávat struktury napříč druhům.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=100mm]{../img/kap01/editation.png}
+  \caption{Ilustrace jednoduchých editací vzorové struktury.}
+\end{figure}
 
 \subsection{R2DT} 
 
 R2DT\cite{R2DT2021} je metoda pro predikci a vizualizaci široké škály
 sekundárních RNA struktur ve radial diagramu. R2DT je postaveno na knihovně se
 3 647 vzory reprezentujícími většinu známých RNA struktur. R2DT se používá na
-ncRNA\footnote{RNA, která se nepřekládá do proteinů} (non-coding RNA)
-sekvencích z RNAcentral\footnote{https://rnacentral.org/} databáze a vytvořila
-více než 27 miliónů diagramů\footnote{Číslo je aktuální k datu 11.4. 2023},
-čímž tvoří největší světovou sadu dat s 2D RNA strukturami. Pro vizualizaci
-neboli 2D rozložení používá R2DT právě výše zmíněný nástroj Traveler.
+ncRNA sekvencích z RNAcentral\footnote{https://rnacentral.org/} databáze a
+vytvořila více než 27 miliónů diagramů\footnote{Číslo je aktuální k datu 11.4.
+2023}, čímž tvoří největší světovou sadu dat s 2D RNA strukturami. Pro
+vizualizaci neboli 2D rozložení používá R2DT právě výše zmíněný nástroj
+Traveler.
