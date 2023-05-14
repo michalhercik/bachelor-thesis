@@ -1,0 +1,111 @@
+\chapter{Přílohy}
+
+\section{SQL dotazy pro získání testovacích dat}
+
+\begin{lstlisting}[caption={SQL dotaz pro získání vzorových struktur},label=vzorsql]
+  SELECT 
+    sslm.id, 
+    sslm.model_name, 
+    sslm.model_source, 
+    sslm.model_length, 
+    sslm.rna_type, 
+    COUNT(*)
+  FROM 
+    rnacen.rnc_secondary_structure_layout_models sslm 
+    JOIN rnacen.rnc_secondary_structure_layout ssl 
+    ON (ssl.model_id = sslm.id)
+  GROUP BY
+    sslm.id
+  ORDER BY model_name
+\end{lstlisting}
+
+% \begin{lstlisting}[caption={Dotaz pro získání struktur vygenerovaných ze zvolených vzorových struktur},label=structsql]
+%   SELECT 
+%     sslm.id, 
+%     sslm.model_name, 
+%     sslm.model_source, 
+%     sslm.model_length, 
+%     sslm.rna_type, 
+%     COUNT(*)
+%   FROM 
+%     rnacen.rnc_secondary_structure_layout_models sslm 
+%     JOIN rnacen.rnc_secondary_structure_layout ssl 
+%     ON (ssl.model_id = sslm.id)
+%   GROUP BY
+%     sslm.id
+%   HAVING
+%     sslm.model_name IN ('LD_SSU_3D'
+%               , 'RF03163'
+%               , 'RF03163'
+%               , 'RF04183'
+%               , 'RNAseP_e_H_sapiens_3D'
+%               , 'EC_SSU_3D'
+%               , 'TT_SSU_3D'
+%               , 'mt_TetT_LSU_3D'
+%               , 'E-Thr'
+%               , 'mHS_LSU_3D'
+%               , 'DM_LSU_3D'
+%               , 'DD_28S_3D'
+%               , 'RF02705'
+%               , 'RF00025'
+%               , 'd.5.b.Thermus.sp'
+%               , 'd.16.b.S.gougerotii'
+%               , 'd.5.e.S.oshimae'
+%               , 'd.16.e.P.falciparum.S'
+%               , 'a.16.c.C.ruber'
+%               , 'HS_LSU_3D'
+%               , 'TeT_LSU_3D'
+%               )
+%   ORDER BY model_name
+% \end{lstlisting}
+
+\begin{lstlisting}[caption={SQL dotaz pro získání struktur vygenerovaných ze zvolených vzorových struktur},label=structsql]
+  SELECT 
+    *,
+    rna.seq_short
+  FROM 
+  (
+    SELECT row_number() 
+    OVER (PARTITION BY ssl.model_id ORDER BY ssl.id ASC) As rn,
+      ssl.*,
+      sslm.model_name as template_name, 
+      sslm.model_source as template_source, 
+      sslm.model_length as template_length, 
+      sslm.rna_type
+    FROM
+      (SELECT 
+         * 
+       FROM 
+         rnacen.rnc_secondary_structure_layout_models
+      WHERE
+        model_name IN ('LD_SSU_3D'
+                , 'RF03163'
+                , 'RF03163'
+                , 'RF04183'
+                , 'RNAseP_e_H_sapiens_3D'
+                , 'EC_SSU_3D'
+                , 'TT_SSU_3D'
+                , 'mt_TetT_LSU_3D'
+                , 'E-Thr'
+                , 'mHS_LSU_3D'
+                , 'DM_LSU_3D'
+                , 'DD_28S_3D'
+                , 'RF02705'
+                , 'RF00025'
+                , 'd.5.b.Thermus.sp'
+                , 'd.16.b.S.gougerotii'
+                , 'd.5.e.S.oshimae'
+                , 'd.16.e.P.falciparum.S'
+                , 'a.16.c.C.ruber'
+                , 'HS_LSU_3D'
+                , 'TeT_LSU_3D'
+                )
+    ) sslm
+    JOIN rnacen.rnc_secondary_structure_layout ssl 
+    ON ( sslm.id = ssl.model_id)        
+      ORDER BY sslm.model_name    
+  ) t
+  JOIN rnacen.rna rna ON (rna.upi = t.urs)
+  WHERE rn < 20
+\end{lstlisting}
+

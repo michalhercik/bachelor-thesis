@@ -1,2 +1,23 @@
 \chapter*{Závěr}
 \addcontentsline{toc}{chapter}{Závěr}
+
+Cílem této práce bylo vytvořit knihovnu pro web, pomocí které bude možné
+vytvářet vizualizace několika sekundárních struktur RNA a porovnávat je mezi
+sebou. V této práci jsme na začátek čtenáře krátce seznámili s RNA, její
+funkcí\ref{rnauvod} a vizualizací. Následně jsme představili knihovnu napsanou
+v jazyce Typescript, která pomocí jednoduchého rozhraní\ref{seznameni}
+zpřístupňuje metody pro porovnání dostatečné podobných struktur\ref{porovnani}.
+Knihovna nabízí plynulé vykreslování několika struktur najednou\ref{canvas} a
+je jednoduše přístupná přes npm nebo GitHub\ref{seznameni}.
+
+Ukázalo se, že vizualizace několika sekundárních struktur RNA je složitá.
+Dokázali jsme vytvořit knihovnu pro vizualizaci, ale použité metody jsou vhodné
+pouze pro dvě nebo tři struktury najednou, při větším množství se metody
+neukázaly nápomocné, především protože vizualizace přestane být přehledná.
+Navíc jsme se omezili na struktury, které jsou si dostatečně podobné.
+
+V budoucnu by bylo užitečné knihovnu rozšířit o metody, které dokážou pracovat
+s libovolnýma strukturami nebo se strukturami, které patří do stejné
+klasifikace\cite{rfam}. Tím bychom se přiblížili k původnímu cíli této práce.
+Dalším vylepšením by mohla být optimalizace kódu, aby byla knihovna schopná
+pracovat plynule s větším množstvím struktur.

@@ -1,7 +1,17 @@
 % Metadata k uložení do PDF, podrobnější popis viz dokumentace balíčku pdfx.
 
-\Author{Jméno Příjmení}
-\Title{Název práce}
-\Keywords{klíčová slova\sep další taková\sep ještě jiná}
-\Subject{Abstrakt práce}
+\Author{Michal Hercík}
+\Title{Webový plugin pro vizualizaci sady sekundárních struktur RNA}
+\Keywords{bioinformatika \sep RNA \sep sekundární struktura \sep web \sep plugin}
+\Subject{ 
+Zkoumání RNA je důležité pro lepší pochopení evoluce nebo některých onemocnění.
+V této práci představujeme knihovnu napsanou v jazyce Typescript, která nabízí
+metody pro vizuální analýzu více sekundárních struktur RNA, nejlépe ale metody
+fungují pří práci s dvěmi nebo třemi strukturami. Pro reprezentaci používáme
+radial diagram, který je vygenerovaný na základě vzorové struktury. Metody
+použité v knihovně pro analýzu využívají způsobu generování radial diagramu a
+to tak, že diagramy vygenerované ze stejné vzorové struktury na sebe mapuje
+právě pomocí vzorové struktury, díky tomu lze sledovat rozdíly a podobnosti
+struktur.
+}
 \Publisher{Univerzita Karlova}
